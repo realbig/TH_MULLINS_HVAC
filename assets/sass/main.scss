@@ -1,0 +1,51 @@
+/*!
+Theme Name: Mullins
+Description: A kick-butt theme for Mullins.
+Author: Eric Defore
+Author URI: http://realbigmarketing.com
+Version: 0.1.0
+*/
+
+// Vendor
+@import "../vendor/css/normalize";
+
+// Deps
+//@import "settings.scss";
+//@import "functions.scss";
+
+// Foundation
+// Here we control all of the various foundation components to use
+@import "../vendor/sass/foundation/components/visibility";
+@import "../vendor/sass/foundation/components/accordion";
+@import "../vendor/sass/foundation/components/clearing";
+@import "../vendor/sass/foundation/components/grid";
+@import "../vendor/sass/foundation/components/buttons";
+@import "../vendor/sass/foundation/components/type";
+@import "../vendor/sass/foundation/components/forms";
+//@import "foundation-extend";
+
+// Setup
+//@import "base";
+
+// Static
+//@import "static/header";
+//@import "static/body";
+//@import "static/footer";
+//@import "static/sidebar";
+
+// Templates
+//@import "templates/common";
+//@import "templates/bucket";
+//@import "templates/single-post";
+//@import "templates/page";
+//@import "templates/home";
+
+// Shortcodes
+//@import "shortcodes/social";
+
+// Partials
+//@import "partials/searchform";
+//@import "partials/youtube-embeds";
+
+// Overrides
+@import "wp";
