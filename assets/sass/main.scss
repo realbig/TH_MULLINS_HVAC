@@ -10,8 +10,8 @@ Version: 0.1.0
 @import "../vendor/css/normalize";
 
 // Deps
-//@import "settings.scss";
-//@import "functions.scss";
+@import "settings.scss";
+@import "functions.scss";
 
 // Foundation
 // Here we control all of the various foundation components to use
@@ -22,30 +22,27 @@ Version: 0.1.0
 @import "../vendor/sass/foundation/components/buttons";
 @import "../vendor/sass/foundation/components/type";
 @import "../vendor/sass/foundation/components/forms";
-//@import "foundation-extend";
+@import "foundation-extend";
 
 // Setup
-//@import "base";
+@import "base";
 
 // Static
-//@import "static/header";
-//@import "static/body";
-//@import "static/footer";
-//@import "static/sidebar";
+@import "static/header";
+@import "static/body";
+@import "static/footer";
+@import "static/sidebar";
 
 // Templates
-//@import "templates/common";
-//@import "templates/bucket";
-//@import "templates/single-post";
-//@import "templates/page";
-//@import "templates/home";
+@import "templates/common";
+@import "templates/single-post";
+@import "templates/page";
+@import "templates/home";
 
 // Shortcodes
-//@import "shortcodes/social";
 
 // Partials
 //@import "partials/searchform";
-//@import "partials/youtube-embeds";
 
 // Overrides
 @import "wp";

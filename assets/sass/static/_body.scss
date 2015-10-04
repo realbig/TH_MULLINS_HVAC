@@ -1,0 +1,13 @@
+/*
+The static site body.
+
+@since 0.1.0
+*/
+
+@import "../settings";
+
+#site-content {
+  @media #{$medium-up} {
+    min-height: 400px;
+  }
+}

@@ -1,0 +1,98 @@
+/*
+The static site header.
+
+@since 0.1.0
+*/
+@import "../settings";
+
+#site-header {
+  background: $dark-color;
+  padding: 1em 0.5em;
+  border-bottom: 3px solid $primary-color;
+
+  .logo {
+
+    @media #{$small-only} {
+      margin-bottom: 10px;
+    }
+
+    a {
+      width: 150px;
+      display: inline-block;
+    }
+  }
+
+  .phone-number .fa.fa-phone {
+      color: $anchor-font-color;
+      text-decoration: $anchor-text-decoration;
+      line-height: inherit;
+
+      img { border:none; }
+  }
+
+  .top-nav {
+    margin: 0 1em;
+
+    .menu {
+      margin: 0;
+    }
+
+    .menu-item {
+      display: inline-block;
+      color: $light-color;
+      font-size: 0.8em;
+
+      &:not(:first-of-type):before {
+        content: '|';
+        margin: 0 0.5em;
+      }
+
+      a {
+        color: inherit;
+      }
+    }
+  }
+
+  .search-form {
+    .search-field {
+      width: 100%;
+    }
+  }
+
+  .phone {
+    color: $light-color;
+    font-weight: bold;
+    font-size: 2em;
+  }
+
+  .bible-verse {
+    color: $light-color;
+    font-style: italic;
+    font-size: 0.8em;
+
+    a {
+      color: inherit;
+    }
+  }
+}
+
+.mobile-search {
+  border-bottom: 3px solid $dark-color;
+  margin-bottom: 15px;
+
+  form, input {
+    margin: 0;
+  }
+}
+
+.mobile-bible-verse {
+  color: inherit;
+  font-style: italic;
+  font-size: 0.8em;
+  padding-left: 5%;
+  padding-right: 5%;
+
+  a {
+    color: inherit;
+  }
+}

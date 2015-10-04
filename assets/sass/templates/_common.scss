@@ -1,0 +1,35 @@
+/*
+Styles shared among all templates.
+
+@since 0.1.0
+*/
+@import "../settings";
+
+.page-content {
+  margin: 30px 0;
+}
+
+.technical-documents {
+  @extend .row;
+  list-style: none;
+  margin: 0;
+
+  li {
+    @extend .columns;
+    @extend .small-12;
+    @extend .medium-6;
+    @extend .large-4;
+  }
+}
+
+.post-meta {
+  font-style: italic;
+  color: lighten($body-font-color, 40%);
+}
+
+.testimonial {
+  .testimonial-copy {
+    color: #888;
+    font-style: italic;
+  }
+}

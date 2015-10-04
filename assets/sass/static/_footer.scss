@@ -1,0 +1,170 @@
+/*
+The static site footer.
+
+@since 0.1.0
+*/
+@import "../settings";
+
+#site-footer {
+  margin-top: 30px;
+
+  .primary-nav {
+    background: $dark-color;
+
+    @media #{$medium-up} {
+    }
+
+    margin-bottom: 3px;
+
+    .menu {
+      margin: 0;
+      list-style: none;
+      color: $light-color;
+      padding: 0 0.5em;
+
+      @media #{$small-only} {
+        padding: 0;
+      }
+
+      > .menu-item {
+        position: relative;
+        float: left;
+        text-align: center;
+
+        @media #{$small-only} {
+          float: none;
+          text-align: center;
+          width: 100% !important;
+          border-top: 3px solid #fff;
+        }
+
+        &:hover {
+          .sub-menu {
+            @media #{$medium-up} {
+              display: block;
+            }
+          }
+
+          > a {
+            @media #{$medium-up} {
+              background: $primary-color;
+            }
+          }
+        }
+
+        &:first-of-type {
+
+          @media #{$small-only} {
+            border-top: none;
+          }
+
+          a {
+            border-left: 3px solid #fff;
+          }
+        }
+
+        > a {
+          display: block;
+          color: inherit;
+          padding: 0.5em 1em;
+          border-right: 3px solid #fff;
+
+          @media #{$small-only} {
+            display: inline-block;
+            border: none !important;
+          }
+        }
+      }
+    }
+
+    // Second level deep (max)
+    .sub-menu {
+      position: absolute;
+      bottom: 100%;
+      white-space: nowrap;
+      list-style: none;
+      margin: 0;
+      //box-shadow: 0 0 30px rgba(#000, 0.3);
+      display: none;
+      width: 100%;
+      padding-right: 3px;
+      z-index: 50;
+
+      .menu-item {
+        &:last-of-type {
+          a {
+            border-bottom: none;
+          }
+        }
+      }
+
+      a {
+        display: block;
+        color: inherit;
+        padding: 0.5em;
+        background: $primary-color;
+        border-bottom: 1px solid darken($primary-color, 5%);
+
+        &:hover {
+          background: darken($primary-color, 5%);
+        }
+      }
+    }
+  }
+
+  .footer-menu {
+    color: darken($light-color, 30%);
+    font-size: 0.7em;
+    padding: 1em 0.5em;
+    background: $dark-color;
+
+    a {
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      font-size: inherit;
+
+      // Only 3rd level deep and on
+      ul ul {
+        margin-left: 1em;
+
+        // Add dash before third level deep items
+        li {
+          &:before {
+            content: '- ';
+          }
+        }
+      }
+    }
+
+    .footer-menu-column {
+
+      // First level
+      > .pagenav {
+        font-weight: bold;
+        cursor: default;
+        font-size: 1.2em;
+
+        > ul {
+          font-weight: normal;
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+
+  .footer-mobile {
+    background: $dark-color;
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
+
+    a {
+      color: inherit;
+    }
+
+  }
+}

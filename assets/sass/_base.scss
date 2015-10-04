@@ -1,0 +1,162 @@
+/*
+Base element settings (no classes or id's).
+
+@since 0.1.0
+*/
+@import "settings";
+@import "../vendor/sass/foundation/components/buttons";
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5){
+  html,
+  body{
+    width:100%;
+    overflow-x:hidden;
+  }
+}
+
+a {
+  &.color-invert {
+    color: inherit;
+
+    &:hover {
+      color: $anchor-font-color-hover;
+    }
+  }
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+}
+
+// Ghost buttons
+button, .button {
+  transition: border 300ms, color 300ms, background-color 300ms;
+
+  &:hover {
+    border-color: $button-border-hover;
+    color: $button-border-hover;
+  }
+
+  &:active, &:focus {
+    color: inherit;
+  }
+
+  &.fill {
+    background-color: $primary-color;
+    color: $light-color;
+    border: none;
+
+    &:active, &:focus {
+      color: $light-color;
+    }
+
+    &:hover {
+      background-color: darken($primary-color, 5%);
+      color: $light-color;
+    }
+  }
+
+  &.secondary {
+    color: $light-color;
+
+    &:active, &:focus {
+      color: $light-color;
+    }
+
+    &:hover {
+      border-color: $secondary-button-border-hover;
+      color: $secondary-button-border-hover;
+    }
+  }
+
+  &.warning {
+
+    &:active, &:focus {
+      color: $warning-button-border-hover;
+    }
+
+    &:hover {
+      border-color: $warning-button-border-hover;
+      color: $warning-button-border-hover;
+    }
+  }
+
+  &.info {
+
+    &:active, &:focus {
+      color: $info-button-border-hover;
+    }
+
+    &:hover {
+      border-color: $info-button-border-hover;
+      color: $info-button-border-hover;
+    }
+  }
+
+  &.alert {
+
+    &:active, &:focus {
+      color: $alert-button-border-hover;
+    }
+
+    &:hover {
+      border-color: $alert-button-border-hover;
+      color: $alert-button-border-hover;
+    }
+  }
+
+  &.success {
+
+    &:active, &:focus {
+      color: $success-button-bg-hover;
+    }
+
+    &:hover {
+      border-color: $success-button-border-hover;
+      color: $success-button-border-hover;
+    }
+  }
+}
+
+// Select color
+::selection {
+  background: $primary-color;
+  @include light-or-dark-text($primary-color);
+}
+
+::-moz-selection {
+  background: $primary-color;
+  @include light-or-dark-text($primary-color);
+}
+
+// Classes
+.screen-reader-text {
+  display: none;
+}
+
+.row.expand {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: none;
+}
+
+.alignleft {
+  float: left;
+  margin-right: $gutter;
+}
+
+.alignright {
+  float: right;
+  margin-left: $gutter;
+}
+
+.aligncenter {
+  display: block;
+  margin: $gutter auto;
+}
