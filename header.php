@@ -44,21 +44,23 @@ if ( ! isset( $_SESSION ) ) {
                 <span class="facebook"><i class="fa fa-facebook-square"></i> <a href = "<?php echo get_theme_mod( 'mullins_facebook_url', 'http://facebook.com' ); ?>" target = "_blank">Follow us on Facebook!</a></span>
             </div>
         </div>
-		<div class="row">
-			<div class="logo medium-left small-only-text-center">
+		<div class="row full-width">
+			<div class="logo small-text-center">
 				<a href="<?php bloginfo( 'url' ); ?>" title = "<?php bloginfo( 'name' ); ?> - Home">
 					<img src="<?php echo get_theme_mod( 'mullins_logo_image', 'http://placehold.it/350x150' ); ?>" alt = "<?php bloginfo( 'name' ); ?>"/>
 				</a>
 			</div>
+        </div>
+        <div class = "row full-width">
 
-			<div class="container medium-right small-only-text-center show-for-medium-up">
-				<div class="row">
+			<div class="container small-text-center show-for-medium-up">
+
 					<div class="columns small-12">
 						<div class="medium-right">
 							<?php //get_search_form(); ?>
 						</div>
 
-						<nav class="top-nav medium-right">
+						<nav class="top-nav">
 							<?php
 
                             require_once __DIR__ . '/includes/class-mullins-walker-primarynav.php';
@@ -82,7 +84,7 @@ if ( ! isset( $_SESSION ) ) {
 						</nav>
                         
 					</div>
-				</div>
+
 			</div>
 		</div>
 	</header>
