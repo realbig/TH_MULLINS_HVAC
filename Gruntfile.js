@@ -92,7 +92,11 @@ module.exports = function (grunt) {
             admin: {
                 files: {
                     'admin.js': [
-                        'assets/js/admin/*.js'
+                        'assets/js/admin/*.js',
+                        '!assets/js/admin/customizer.js'
+                    ],
+                    'customizer.js': [
+                        'assets/js/admin/customizer.js'
                     ]
                 }
             }
