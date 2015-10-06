@@ -25,7 +25,7 @@
 	} );
 	wp.customize( 'mullins_phone_number', function( value ) {
 		value.bind( function( newVal ) {
-			$( '#site-header .phone-number-link' ).html( getPhoneNumberLink( newVal ) );
+			$( '#site-header .phone-number-link' ).replaceWith( getPhoneNumberLink( newVal ) );
 		} );
 	} );
     wp.customize( 'mullins_facebook_url', function( value ) {
