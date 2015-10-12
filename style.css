@@ -3425,25 +3425,19 @@ body.home #home-cta .button {
   font-weight: bold;
   margin: 0; }
 
-body.home #home-products {
-  position: relative;
-  background: #41EEFF;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  margin-top: 30px; }
-  body.home #home-products:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: url("assets/images/random-grey-variations.png");
-    opacity: 0.4; }
-  body.home #home-products .button {
+body.home #home-services {
+  position: relative; }
+  body.home #home-services .fa {
+    text-align: center;
+    font-size: 4em;
+    display: block; }
+  body.home #home-services h3, body.home #home-services .fa {
+    text-align: center;
+    color: #000; }
+  body.home #home-services .button {
     margin: 0; }
   @media only screen and (max-width: 40em) {
-    body.home #home-products .vertical-center {
+    body.home #home-services .vertical-center {
       margin-top: 0 !important; } }
 
 /*

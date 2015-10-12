@@ -20,7 +20,7 @@
 	// Binds directly to Customizer Controls for instaneous changes. No soft-refreshes.
 	wp.customize( 'mullins_logo_image', function( value ) {
 		value.bind( function( newVal ) {
-			$( '.logo a img' ).attr( 'src', newval );
+			$( '.logo a img' ).attr( 'src', newVal );
 		} );
 	} );
 	wp.customize( 'mullins_phone_number', function( value ) {
@@ -31,6 +31,34 @@
     wp.customize( 'mullins_facebook_url', function( value ) {
 		value.bind( function( newVal ) {
 			$( '#site-header .facebook a' ).attr( 'href', newVal );
+		} );
+	} );
+
+    /* Home Page */
+
+    wp.customize( 'mullins_indoor_air_quality_icon', function( value ) {
+		value.bind( function( newVal ) {
+			$( '#indoor_air_quality_grid_item .fa' ).removeAttr( 'class' ).addClass( 'fa fa-' + newVal );
+		} );
+	} );
+    wp.customize( 'mullins_refrigeration_icon', function( value ) {
+		value.bind( function( newVal ) {
+			$( '#refrigeration_grid_item .fa' ).removeAttr( 'class' ).addClass( 'fa fa-' + newVal );
+		} );
+	} );
+    wp.customize( 'mullins_geo_thermal_icon', function( value ) {
+		value.bind( function( newVal ) {
+			$( '#geo_thermal_grid_item .fa' ).removeAttr( 'class' ).addClass( 'fa fa-' + newVal );
+		} );
+	} );
+    wp.customize( 'mullins_air_conditioning_icon', function( value ) {
+		value.bind( function( newVal ) {
+			$( '#air_conditioning_grid_item .fa' ).removeAttr( 'class' ).addClass( 'fa fa-' + newVal );
+		} );
+	} );
+    wp.customize( 'mullins_heating_icon', function( value ) {
+		value.bind( function( newVal ) {
+			$( '#heating_grid_item .fa' ).removeAttr( 'class' ).addClass( 'fa fa-' + newVal );
 		} );
 	} );
 	

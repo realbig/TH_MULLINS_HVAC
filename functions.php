@@ -144,38 +144,42 @@ function mullins_customize_register( $wp_customize ) {
         )
     );
 
-    $wp_customize->add_setting( 'mullins_service_icon_1' , array(
-            'default'     => 'flag',
-            'transport'   => 'postMessage',
+    $wp_customize->add_setting( 'mullins_grid_columns' , array(
+            'default'     => 3,
+            'transport'   => 'refresh',
         )
     );
-    $wp_customize->add_control( new Fontawesome_Customizer_Picker( $wp_customize, 'mullins_service_icon_1', array(
-        'label'        => __( 'Service Icon #1', THEME_ID ),
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'mullins_grid_columns', array(
+        'type' => 'number',
+        'label'        => __( 'Services Number of Columns', THEME_ID ),
         'section'    => 'mullins_home_customizer_section',
-        'settings'   => 'mullins_service_icon_1',
+        'settings'   => 'mullins_grid_columns',
     ) ) );
 
-    $wp_customize->add_setting( 'mullins_service_icon_2' , array(
-            'default'     => 'flag',
-            'transport'   => 'postMessage',
-        )
-    );
-    $wp_customize->add_control( new Fontawesome_Customizer_Picker( $wp_customize, 'mullins_service_icon_2', array(
-        'label'        => __( 'Service Icon #2', THEME_ID ),
-        'section'    => 'mullins_home_customizer_section',
-        'settings'   => 'mullins_service_icon_2',
-    ) ) );
+    $services_page = get_page_by_title( 'Services' );
+    $services_children = get_posts( array(
+        'post_parent' => $services_page->ID,
+        'posts_per_page' => -1,
+        'post_status' => 'publish',
+        'post_type' => 'page',
+    ) );
     
-    $wp_customize->add_setting( 'mullins_service_icon_3' , array(
-            'default'     => 'flag',
-            'transport'   => 'postMessage',
-        )
-    );
-    $wp_customize->add_control( new Fontawesome_Customizer_Picker( $wp_customize, 'mullins_service_icon_3', array(
-        'label'        => __( 'Service Icon #3', THEME_ID ),
-        'section'    => 'mullins_home_customizer_section',
-        'settings'   => 'mullins_service_icon_3',
-    ) ) );
+    foreach ( $services_children as $service ) {
+
+        $title = str_replace( ' ', '_', strtolower( $service->post_title ) );
+
+        $wp_customize->add_setting( 'mullins_' . $title . '_icon' , array(
+                'default'     => 'flag',
+                'transport'   => 'postMessage',
+            )
+        );
+        $wp_customize->add_control( new Fontawesome_Customizer_Picker( $wp_customize, 'mullins_' . $title . '_icon', array(
+            'label'        => __( $service->post_title . ' Icon', THEME_ID ),
+            'section'    => 'mullins_home_customizer_section',
+            'settings'   => 'mullins_' . $title . '_icon',
+        ) ) );
+
+    }
 
 }
 
