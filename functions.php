@@ -57,8 +57,8 @@ add_action( 'after_setup_theme', function () {
     
     // Add Customizer Controls
     add_action( 'customize_register', 'mullins_customize_register' );
-    
-    // Add Customizer JavaScript
+
+    // Add Customizer Preview JavaScript
     add_action( 'customize_preview_init', 'mullins_customizer_live_preview' );
 
 	// Allow shortcodes in text widget
@@ -94,6 +94,8 @@ function _meesdist_add_image_sizes( $sizes ) {
  */
 function mullins_customize_register( $wp_customize ) {
     
+    // General Theme Options
+
     $wp_customize->add_section( 'mullins_customizer_section' , array(
             'title'      => __( 'Mullins Settings', THEME_ID ),
             'priority'   => 30,
@@ -133,6 +135,48 @@ function mullins_customize_register( $wp_customize ) {
         'settings'   => 'mullins_facebook_url',
     ) ) );
     
+    // Home Page Specific
+
+    $wp_customize->add_section( 'mullins_home_customizer_section' , array(
+            'title'      => __( 'Home Page Settings', THEME_ID ),
+            'priority'   => 40,
+            'active_callback' => 'is_front_page',
+        )
+    );
+
+    $wp_customize->add_setting( 'mullins_service_icon_1' , array(
+            'default'     => 'flag',
+            'transport'   => 'postMessage',
+        )
+    );
+    $wp_customize->add_control( new Fontawesome_Customizer_Picker( $wp_customize, 'mullins_service_icon_1', array(
+        'label'        => __( 'Service Icon #1', THEME_ID ),
+        'section'    => 'mullins_home_customizer_section',
+        'settings'   => 'mullins_service_icon_1',
+    ) ) );
+
+    $wp_customize->add_setting( 'mullins_service_icon_2' , array(
+            'default'     => 'flag',
+            'transport'   => 'postMessage',
+        )
+    );
+    $wp_customize->add_control( new Fontawesome_Customizer_Picker( $wp_customize, 'mullins_service_icon_2', array(
+        'label'        => __( 'Service Icon #2', THEME_ID ),
+        'section'    => 'mullins_home_customizer_section',
+        'settings'   => 'mullins_service_icon_2',
+    ) ) );
+    
+    $wp_customize->add_setting( 'mullins_service_icon_3' , array(
+            'default'     => 'flag',
+            'transport'   => 'postMessage',
+        )
+    );
+    $wp_customize->add_control( new Fontawesome_Customizer_Picker( $wp_customize, 'mullins_service_icon_3', array(
+        'label'        => __( 'Service Icon #3', THEME_ID ),
+        'section'    => 'mullins_home_customizer_section',
+        'settings'   => 'mullins_service_icon_3',
+    ) ) );
+
 }
 
 /**
@@ -171,8 +215,17 @@ add_action( 'init', function () {
 		defined( 'WP_DEBUG' ) && WP_DEBUG ? time() : THEME_VERSION,
 		true
 	);
-    
-    // Theme script
+
+    // Admin script
+    wp_register_script(
+		THEME_ID . '-admin',
+		get_template_directory_uri() . '/admin.js',
+		array( 'jquery' ),
+		defined( 'WP_DEBUG' ) && WP_DEBUG ? time() : THEME_VERSION,
+		true
+	);
+
+    // Customizer Preview script
 	wp_register_script(
 		THEME_ID . '-customizer',
 		get_template_directory_uri() . '/customizer.js',
@@ -180,6 +233,8 @@ add_action( 'init', function () {
 		defined( 'WP_DEBUG' ) && WP_DEBUG ? time() : THEME_VERSION,
 		true
 	);
+
+    require_once( __DIR__ . '/includes/class-fontawesome-customizer-picker.php' );
 
 	// Theme fonts
 	if ( ! empty( $mullins_fonts ) ) {
@@ -206,7 +261,7 @@ add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_style( THEME_ID );
 
 	// Theme script
-	wp_enqueue_script( THEME_ID );
+	// wp_enqueue_script( THEME_ID );
 
 	// Theme fonts
 	if ( ! empty( $mullins_fonts ) ) {
