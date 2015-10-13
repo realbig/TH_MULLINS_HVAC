@@ -24,13 +24,13 @@ Styles shared among all templates.
 #services {
     position: relative;
 
-    .fa {
+    .fa, .wi {
       text-align: center;
       font-size: 4em;
       display: block;
     }
 
-    h3, .fa {
+    h3, .fa, .wi {
       text-align: center;
       color: #000;
     }

@@ -40,8 +40,8 @@ if ( ! isset( $_SESSION ) ) {
 	<header id="site-header">
         <div class="row">
             <div class="medium-left small-only-text-center">
-                <span class="phone-number"><i class="fa fa-phone"></i> <?php echo get_phone_number_link( get_theme_mod( 'mullins_phone_number', '(517) 867-5309' ) ); ?></span>
-                <span class="facebook"><i class="fa fa-facebook-square"></i> <a href = "<?php echo get_theme_mod( 'mullins_facebook_url', 'http://facebook.com' ); ?>" target = "_blank">Follow Us On Facebook!</a></span>
+                <span class="phone-number"><span class="fa fa-phone"></span> <?php echo get_phone_number_link( get_theme_mod( 'mullins_phone_number', '(517) 867-5309' ) ); ?></span>
+                <span class="facebook"><span class="fa fa-facebook-square"></span> <a href = "<?php echo get_theme_mod( 'mullins_facebook_url', 'http://facebook.com' ); ?>" target = "_blank">Follow Us On Facebook!</a></span>
             </div>
         </div>
 		<div class="row full-width">

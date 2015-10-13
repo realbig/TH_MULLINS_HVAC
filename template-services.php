@@ -50,7 +50,7 @@ the_post();
                                     ?>
                                     <a href = "<?php the_permalink(); ?>">
                                         <div id = "<?php echo $title; ?>_grid_item" class="medium-<?php echo (12/$max_grid); ?> small-12 columns button">
-                                            <i class = "fa fa-<?php echo get_theme_mod( 'mullins_' . $title . '_icon', 'flag' ); ?>"></i>
+                                            <span class = "<?php echo get_theme_mod( 'mullins_' . $title . '_icon', 'fa fa-flag' ); ?>"></i>
                                             <h3><?php the_title(); ?></h3>
                                         </div>
                                     </a>
@@ -67,7 +67,7 @@ the_post();
                                     ?>
                                     <a href = "<?php the_permalink(); ?>">
                                         <div id = "<?php echo $title; ?>_grid_item" class="medium-<?php echo (12/$remainder); ?> small-12 columns button">
-                                            <i class = "fa fa-<?php echo get_theme_mod( 'mullins_' . $title . '_icon', 'flag' ); ?>"></i>
+                                            <span class = "<?php echo get_theme_mod( 'mullins_' . $title . '_icon', 'fa fa-flag' ); ?>"></i>
                                             <h3><?php the_title(); ?></h3>
                                         </div>
                                     </a>

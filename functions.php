@@ -271,12 +271,12 @@ function mullins_customize_register( $wp_customize ) {
         $title = str_replace( ' ', '_', strtolower( $service->post_title ) );
 
         $wp_customize->add_setting( 'mullins_' . $title . '_icon' , array(
-                'default'     => 'flag',
+                'default'     => 'fa fa-flag',
                 'transport'   => 'postMessage',
             )
         );
-        $wp_customize->add_control( new Fontawesome_Customizer_Picker( $wp_customize, 'mullins_' . $title . '_icon', array(
-            'label'        => __( $service->post_title . ' Icon', THEME_ID ),
+        $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'mullins_' . $title . '_icon', array(
+            'label'        => __( $service->post_title . ' Icon Classes', THEME_ID ),
             'section'    => 'mullins_home_customizer_section',
             'settings'   => 'mullins_' . $title . '_icon',
         ) ) );
@@ -341,8 +341,6 @@ add_action( 'init', function () {
 		defined( 'WP_DEBUG' ) && WP_DEBUG ? time() : THEME_VERSION,
 		true
 	);
-
-    require_once( __DIR__ . '/includes/class-fontawesome-customizer-picker.php' );
 
 	// Theme fonts
 	if ( ! empty( $mullins_fonts ) ) {

@@ -25,6 +25,11 @@ Version: 0.1.0
 @import "../vendor/sass/foundation/components/forms";
 @import "foundation-extend";
 
+// Weather-Icons
+@import "../vendor/css/weather-icons-core.scss";
+@import "../vendor/css/weather-icons-variables.scss";
+@import "../vendor/css/weather-icons-classes.scss";
+
 // Setup
 @import "base";
 
