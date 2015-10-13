@@ -144,6 +144,74 @@ function mullins_customize_register( $wp_customize ) {
         )
     );
 
+    $wp_customize->add_setting( 'cta_service_call_color' , array(
+            'default'     => '#41EEFF',
+            'transport'   => 'refresh',
+        )
+    );
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'cta_service_call_color', array(
+        'label'        => __( 'Service Call CTA Color', THEME_ID ),
+        'section'    => 'mullins_home_customizer_section',
+        'settings'   => 'cta_service_call_color',
+    ) ) );
+
+    $wp_customize->add_setting( 'cta_service_call_image' , array(
+            'default'     => 'http://placehold.it/300x200',
+            'transport'   => 'postMessage',
+        )
+    );
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'cta_service_call_image', array(
+        'label'        => __( 'Service Call CTA Image', THEME_ID ),
+        'section'    => 'mullins_home_customizer_section',
+        'settings'   => 'cta_service_call_image',
+    ) ) );
+
+    $wp_customize->add_setting( 'cta_service_call_text' , array(
+            'default'     => '<p>Enter Text Using the Customizer</p>',
+            'transport'   => 'refresh',
+        )
+    );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cta_service_call_text', array(
+        'type' => 'textarea',
+        'label'        => __( 'Service Call Text', THEME_ID ),
+        'section'    => 'mullins_home_customizer_section',
+        'settings'   => 'cta_service_call_text',
+    ) ) );
+
+    $wp_customize->add_setting( 'cta_dependability_promise_color' , array(
+            'default'     => '#002B50',
+            'transport'   => 'postMessage',
+        )
+    );
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'cta_dependability_promise_color', array(
+        'label'        => __( 'Dependability Promise CTA Color', THEME_ID ),
+        'section'    => 'mullins_home_customizer_section',
+        'settings'   => 'cta_dependability_promise_color',
+    ) ) );
+
+    $wp_customize->add_setting( 'cta_dependability_promise_image' , array(
+            'default'     => 'http://placehold.it/300x200',
+            'transport'   => 'postMessage',
+        )
+    );
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'cta_dependability_promise_image', array(
+        'label'        => __( 'Dependability Promise CTA Image', THEME_ID ),
+        'section'    => 'mullins_home_customizer_section',
+        'settings'   => 'cta_dependability_promise_image',
+    ) ) );
+
+    $wp_customize->add_setting( 'cta_dependability_promise_text' , array(
+            'default'     => '<p>Enter Text Using the Customizer</p>',
+            'transport'   => 'refresh',
+        )
+    );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cta_dependability_promise_text', array(
+        'type' => 'textarea',
+        'label'        => __( 'Dependability Promise Text', THEME_ID ),
+        'section'    => 'mullins_home_customizer_section',
+        'settings'   => 'cta_dependability_promise_text',
+    ) ) );
+
     $wp_customize->add_setting( 'mullins_grid_columns' , array(
             'default'     => 3,
             'transport'   => 'refresh',
@@ -220,6 +288,8 @@ add_action( 'init', function () {
 		true
 	);
 
+    wp_localize_script( THEME_ID, 'cta_colors', array( 'serviceCall' => get_theme_mod( 'cta_service_call_color', '#41EEFF' ), 'dependabilityPromise' => get_theme_mod( 'cta_dependability_promise_color', '#002B50' ) ) );
+
     // Admin script
     wp_register_script(
 		THEME_ID . '-admin',
@@ -265,7 +335,7 @@ add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_style( THEME_ID );
 
 	// Theme script
-	// wp_enqueue_script( THEME_ID );
+    wp_enqueue_script( THEME_ID );
 
 	// Theme fonts
 	if ( ! empty( $mullins_fonts ) ) {

@@ -36,6 +36,26 @@
 
     /* Home Page */
 
+    /* CTA */
+
+    wp.customize( 'cta_dependability_promise_color', function( value ) {
+		value.bind( function( newVal ) {
+			console.log( 'Due to how the Tab Toggles trigger, there is no good way to preview this. Neither through postMessage or Refresh.' );
+		} );
+	} );
+    wp.customize( 'cta_service_call_image', function( value ) {
+		value.bind( function( newVal ) {
+			$( '#schedule_service_call img' ).attr( 'src', newVal );
+		} );
+	} );
+    wp.customize( 'cta_dependability_promise_image', function( value ) {
+		value.bind( function( newVal ) {
+			console.log( 'Due to how the Tab Toggles trigger, there is no good way to preview this. Neither through postMessage or Refresh.' );
+		} );
+	} );
+
+    /* Services */
+
     wp.customize( 'mullins_indoor_air_quality_icon', function( value ) {
 		value.bind( function( newVal ) {
 			$( '#indoor_air_quality_grid_item .fa' ).removeAttr( 'class' ).addClass( 'fa fa-' + newVal );
