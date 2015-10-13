@@ -9,19 +9,6 @@ Styles shared among all templates.
   margin: 30px 0;
 }
 
-.technical-documents {
-  @extend .row;
-  list-style: none;
-  margin: 0;
-
-  li {
-    @extend .columns;
-    @extend .small-12;
-    @extend .medium-6;
-    @extend .large-4;
-  }
-}
-
 .post-meta {
   font-style: italic;
   color: lighten($body-font-color, 40%);
@@ -32,4 +19,30 @@ Styles shared among all templates.
     color: #888;
     font-style: italic;
   }
+}
+
+#services {
+    position: relative;
+
+    .fa {
+      text-align: center;
+      font-size: 4em;
+      display: block;
+    }
+
+    h3, .fa {
+      text-align: center;
+      color: #000;
+    }
+
+    .button {
+      margin: 0;
+    }
+
+    .vertical-center {
+      @media #{$small-only} {
+        margin-top: 0 !important; // Override so it doesn't try to center on small
+      }
+    }
+
 }

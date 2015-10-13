@@ -39,28 +39,4 @@ body.home {
 
   }
 
-  #home-services {
-    position: relative;
-
-    .fa {
-      text-align: center;
-      font-size: 4em;
-      display: block;
-    }
-
-    h3, .fa {
-      text-align: center;
-      color: #000;
-    }
-
-    .button {
-      margin: 0;
-    }
-
-    .vertical-center {
-      @media #{$small-only} {
-        margin-top: 0 !important; // Override so it doesn't try to center on small
-      }
-    }
-  }
 }

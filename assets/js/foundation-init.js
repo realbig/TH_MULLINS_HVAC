@@ -8,12 +8,12 @@ jQuery( function( $ ) {
         
         if ( $( tab ).attr( 'id' ) == 'schedule_service_call' ) {
             
-            $( tab ).parent().parent().parent().parent().css( 'background-color', cta_colors.serviceCall );
+            $( '#home-cta' ).css( 'background-color', cta_colors.serviceCall );
             
         }
         else {
             
-            $( tab ).parent().parent().parent().parent().css( 'background-color', cta_colors.dependabilityPromise );
+            $( '#home-cta' ).css( 'background-color', cta_colors.dependabilityPromise );
             
         }
         
