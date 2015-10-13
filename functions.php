@@ -365,9 +365,9 @@ add_action( 'widgets_init', function () {
 
 	// Sub-Page
 	register_sidebar( array(
-		'name'         => 'Sub-Page',
-		'id'           => 'subpage',
-		'description'  => 'Displays on all sub-pages.',
+		'name'         => 'Services Sub-Page Sidebar',
+		'id'           => 'services-sub-page-sidebar',
+		'description'  => 'Displays on all Services Sub-Pages.',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title'  => '</h3>',
 	) );
