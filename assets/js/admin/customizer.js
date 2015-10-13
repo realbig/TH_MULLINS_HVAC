@@ -17,6 +17,17 @@
         
     }
 
+    function getEmailLink( emailAddress, linkText ) {
+        // JavaScript clone of function found in includes/theme-functions.php
+
+        var mailtoLink = 'mailto:' + emailAddress.trim();
+
+        if ( linkText === undefined ) linkText = emailAddress;
+
+        return '<a href = "' + mailtoLink + '" class = "email-link">' + linkText + '</a>';
+
+    }
+
 	// Binds directly to Customizer Controls for instaneous changes. No soft-refreshes.
 	wp.customize( 'mullins_logo_image', function( value ) {
 		value.bind( function( newVal ) {
@@ -31,6 +42,11 @@
     wp.customize( 'mullins_facebook_url', function( value ) {
 		value.bind( function( newVal ) {
 			$( '#site-header .facebook a' ).attr( 'href', newVal );
+		} );
+	} );
+    wp.customize( 'mullins_email_address', function( value ) {
+		value.bind( function( newVal ) {
+			$( '.page-template-template-contact .email-link' ).replaceWith( getEmailLink( newVal ) );
 		} );
 	} );
 

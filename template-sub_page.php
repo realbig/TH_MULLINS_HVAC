@@ -18,7 +18,7 @@ the_post();
 
 	<section id="page-<?php the_ID(); ?>" <?php body_class( array( 'page-content' ) ); ?>>
 		<div class="row">
-			<div class="small-9 columns">
+			<div class="medium-9 small-12 columns">
 
 				<?php if ( has_post_thumbnail() ) : ?>
 					<div class="page-image">
@@ -30,7 +30,7 @@ the_post();
 					<?php the_content(); ?>
 				</div>
 			</div>
-            <div class="small-3 columns">
+            <div class="medium-3 small-12 columns">
                 <?php dynamic_sidebar( 'services-sub-page-sidebar' ); ?>
             </div>
             

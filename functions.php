@@ -113,6 +113,18 @@ function mullins_customize_register( $wp_customize ) {
         'settings'   => 'mullins_logo_image',
     ) ) );
     
+    $wp_customize->add_setting( 'mullins_address' , array(
+            'default'     => '123 Some Street<br />Anytown, USA 45678',
+            'transport'   => 'refresh',
+        )
+    );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'mullins_address', array(
+        'type' => 'textarea',
+        'label'        => __( 'Address', THEME_ID ),
+        'section'    => 'mullins_customizer_section',
+        'settings'   => 'mullins_address',
+    ) ) );
+
     $wp_customize->add_setting( 'mullins_phone_number' , array(
             'default'     => '(517) 867-5309',
             'transport'   => 'postMessage',
@@ -124,6 +136,17 @@ function mullins_customize_register( $wp_customize ) {
         'settings'   => 'mullins_phone_number',
     ) ) );
     
+    $wp_customize->add_setting( 'mullins_email_address' , array(
+            'default'     => 'test@fake.com',
+            'transport'   => 'postMessage',
+        )
+    );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'mullins_email_address', array(
+        'label'        => __( 'Email Address', THEME_ID ),
+        'section'    => 'mullins_customizer_section',
+        'settings'   => 'mullins_email_address',
+    ) ) );
+
     $wp_customize->add_setting( 'mullins_facebook_url' , array(
             'default'     => 'http://facebook.com',
             'transport'   => 'postMessage',
@@ -135,6 +158,17 @@ function mullins_customize_register( $wp_customize ) {
         'settings'   => 'mullins_facebook_url',
     ) ) );
     
+    $wp_customize->add_setting( 'mullins_contact_shortcode' , array(
+            'default'     => '[contact-form-7 id="31" title="Schedule a Service Call"]',
+            'transport'   => 'refresh',
+        )
+    );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'mullins_contact_shortcode', array(
+        'label'        => __( 'Contact Form Shortcode', THEME_ID ),
+        'section'    => 'mullins_customizer_section',
+        'settings'   => 'mullins_contact_shortcode',
+    ) ) );
+
     // Home Page Specific
 
     $wp_customize->add_section( 'mullins_home_customizer_section' , array(
