@@ -37,6 +37,8 @@ Styles shared among all templates.
 
     .button {
       margin: 0;
+      border-top: none;
+      border-bottom: none;
     }
 
     .vertical-center {
@@ -45,4 +47,12 @@ Styles shared among all templates.
       }
     }
 
+}
+
+body {
+    background-color: $dark-color;
+}
+
+#wrapper {
+    background-color: $light-color;
 }

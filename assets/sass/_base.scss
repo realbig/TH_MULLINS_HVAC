@@ -47,8 +47,8 @@ button, .button {
   }
 
   &.fill {
-    background-color: $primary-color;
-    color: $light-color;
+    background-color: $medium-color;
+    color: $dark-color;
     border: none;
 
     &:active, &:focus {
@@ -56,8 +56,8 @@ button, .button {
     }
 
     &:hover {
-      background-color: darken($primary-color, 5%);
-      color: $light-color;
+      background-color: darken($medium-color, 5%);
+      color: $primary-color;
     }
   }
 

@@ -9,12 +9,12 @@ The static site footer.
   margin-top: 30px;
 
   .primary-nav {
-    background: $dark-color;
+    background: $medium-color;
 
     @media #{$medium-up} {
     }
 
-    margin-bottom: 3px;
+    border-bottom: 3px solid $dark-color;
 
     .menu {
       margin: 0;
@@ -27,6 +27,7 @@ The static site footer.
       }
 
       > .menu-item {
+        color: $primary-color;
         position: relative;
         float: left;
         text-align: center;
@@ -35,7 +36,7 @@ The static site footer.
           float: none;
           text-align: center;
           width: 100% !important;
-          border-top: 3px solid #fff;
+          border-top: 3px solid $light-color;
         }
 
         &:hover {
@@ -47,7 +48,8 @@ The static site footer.
 
           > a {
             @media #{$medium-up} {
-              background: $primary-color;
+              color: $light-color;
+              background: $secondary-color;
             }
           }
         }
@@ -59,7 +61,7 @@ The static site footer.
           }
 
           a {
-            border-left: 3px solid #fff;
+            border-left: 3px solid $dark-color;
           }
         }
 
@@ -67,7 +69,7 @@ The static site footer.
           display: block;
           color: inherit;
           padding: 0.5em 1em;
-          border-right: 3px solid #fff;
+          border-right: 3px solid $dark-color;
 
           @media #{$small-only} {
             display: inline-block;
@@ -158,7 +160,7 @@ The static site footer.
 
   .footer-mobile {
     background: $dark-color;
-    color: #fff;
+    color: $light-color;
     font-size: 2em;
     font-weight: bold;
 

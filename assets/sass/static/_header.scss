@@ -14,7 +14,7 @@ The static site header.
   background: $medium-color;
   padding: 1em 0.5em;
   padding-bottom: 0;
-  border-bottom: 3px solid $primary-color;
+  border-bottom: 3px solid $secondary-color;
 
   .logo {
 
@@ -75,7 +75,7 @@ The static site header.
 
               > a {
                 @media #{$medium-up} {
-                  background: #FF0000;
+                  background: $secondary-color;
                   color: $light-color;
                 }
               }
