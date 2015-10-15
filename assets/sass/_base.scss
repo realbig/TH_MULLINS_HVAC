@@ -62,7 +62,8 @@ button, .button {
   }
 
   &.secondary {
-    color: $light-color;
+    color: $secondary-color;
+    border-color: $secondary-color;
 
     &:active, &:focus {
       color: $light-color;

@@ -36,29 +36,30 @@ if ( ! isset( $_SESSION ) ) {
 <body <?php body_class(); ?>>
 
 <div id="wrapper">
-
-	<header id="site-header">
+    
+    <div id="top-bar" class="full-width">
         <div class="row">
-            <div class="medium-left small-only-text-center">
-                <span class="phone-number"><span class="fa fa-phone"></span> <?php echo get_phone_number_link( get_theme_mod( 'mullins_phone_number', '(517) 867-5309' ) ); ?></span>
-                <span class="facebook"><span class="fa fa-facebook-square"></span> <a href = "<?php echo get_theme_mod( 'mullins_facebook_url', 'http://facebook.com' ); ?>" target = "_blank">Follow Us On Facebook!</a></span>
+            <div class="small-only-text-center">
+                <span class="phone-number medium-left"><span class="fa fa-phone"></span> <?php echo get_phone_number_link( get_theme_mod( 'mullins_phone_number', '(517) 867-5309' ) ); ?></span>
+                <span class="facebook medium-right"><span class="fa fa-facebook-square"></span> <a href = "<?php echo get_theme_mod( 'mullins_facebook_url', 'http://facebook.com' ); ?>" target = "_blank">Follow Us On Facebook!</a></span>
             </div>
         </div>
-		<div class="row full-width">
+    </div>
+
+	<header id="site-header">
+        
+		<div class="row">
 			<div class="logo small-text-center">
 				<a href="<?php bloginfo( 'url' ); ?>" title = "<?php bloginfo( 'name' ); ?> - Home">
 					<img src="<?php echo get_theme_mod( 'mullins_logo_image', 'http://placehold.it/350x150' ); ?>" alt = "<?php bloginfo( 'name' ); ?>"/>
 				</a>
 			</div>
         </div>
-        <div class = "row full-width">
+        <div class = "row">
 
 			<div class="container small-text-center show-for-medium-up">
 
 					<div class="columns small-12">
-						<div class="medium-right">
-							<?php //get_search_form(); ?>
-						</div>
 
 						<nav class="top-nav">
 							<?php
@@ -88,15 +89,5 @@ if ( ! isset( $_SESSION ) ) {
 			</div>
 		</div>
 	</header>
-
-	<div class="mobile-search hide-for-medium-up">
-		<?php get_search_form(); ?>
-	</div>
-
-	<div class="mobile-bible-verse text-center hide-for-medium-up">
-		<?php //dynamic_sidebar( 'header-bible-verse' ); ?>
-	</div>
-
-	<?php //include __DIR__ . '/includes/partials/bucket-menu.php'; ?>
 
 	<section id="site-content">

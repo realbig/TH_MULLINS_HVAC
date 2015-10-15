@@ -5,9 +5,15 @@ The static site header.
 */
 @import "../settings";
 
+#top-bar {
+    background: $dark-color;
+    font-size: 1.25em;
+}
+
 #site-header {
-  background: $dark-color;
+  background: $medium-color;
   padding: 1em 0.5em;
+  padding-bottom: 0;
   border-bottom: 3px solid $primary-color;
 
   .logo {
@@ -31,27 +37,109 @@ The static site header.
   }
 
   .top-nav {
-    margin: 0 1em;
+        background: $dark-color;
 
-    .menu {
-      margin: 0;
-    }
+        @media #{$medium-up} {
+        }
+        margin-top: 1em;
+        margin-bottom: 3px;
 
-    .menu-item {
-      display: inline-block;
-      color: $light-color;
-      font-size: 0.8em;
+        .menu {
+          margin: 0;
+          list-style: none;
+          color: $primary-color;
+          padding: 0 0.5em;
 
-      &:not(:first-of-type):before {
-        content: '|';
-        margin: 0 0.5em;
+          @media #{$small-only} {
+            padding: 0;
+          }
+
+          > .menu-item {
+            position: relative;
+            float: left;
+            text-align: center;
+
+            @media #{$small-only} {
+              float: none;
+              text-align: center;
+              width: 100% !important;
+              border-top: 3px solid $dark-color;
+            }
+
+            &:hover {
+              .sub-menu {
+                @media #{$medium-up} {
+                  display: block;
+                }
+              }
+
+              > a {
+                @media #{$medium-up} {
+                  background: #FF0000;
+                  color: $light-color;
+                }
+              }
+            }
+
+            &:first-of-type {
+
+              @media #{$small-only} {
+                border-top: none;
+              }
+
+              a {
+                border-left: 3px solid $dark-color;
+              }
+            }
+
+            > a {
+              display: block;
+              color: inherit;
+              padding: 0.5em 1em;
+              border-right: 3px solid $dark-color;
+
+              @media #{$small-only} {
+                display: inline-block;
+                border: none !important;
+              }
+            }
+          }
+        }
+
+        // Second level deep (max)
+        .sub-menu {
+          position: absolute;
+          bottom: 100%;
+          white-space: nowrap;
+          list-style: none;
+          margin: 0;
+          //box-shadow: 0 0 30px rgba(#000, 0.3);
+          display: none;
+          width: 100%;
+          padding-right: 3px;
+          z-index: 50;
+
+          .menu-item {
+            &:last-of-type {
+              a {
+                border-bottom: none;
+              }
+            }
+          }
+
+          a {
+            display: block;
+            color: inherit;
+            padding: 0.5em;
+            background: $primary-color;
+            border-bottom: 1px solid darken($primary-color, 5%);
+
+            &:hover {
+              background: darken($primary-color, 5%);
+            }
+          }
+        }
       }
-
-      a {
-        color: inherit;
-      }
-    }
-  }
 
   .search-form {
     .search-field {
@@ -65,34 +153,4 @@ The static site header.
     font-size: 2em;
   }
 
-  .bible-verse {
-    color: $light-color;
-    font-style: italic;
-    font-size: 0.8em;
-
-    a {
-      color: inherit;
-    }
-  }
-}
-
-.mobile-search {
-  border-bottom: 3px solid $dark-color;
-  margin-bottom: 15px;
-
-  form, input {
-    margin: 0;
-  }
-}
-
-.mobile-bible-verse {
-  color: inherit;
-  font-style: italic;
-  font-size: 0.8em;
-  padding-left: 5%;
-  padding-right: 5%;
-
-  a {
-    color: inherit;
-  }
 }

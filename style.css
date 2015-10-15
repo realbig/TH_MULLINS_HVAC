@@ -2000,8 +2000,8 @@ button, .button {
   padding: 1rem 2rem 1.0625rem 2rem;
   font-size: 1rem;
   background-color: transparent;
-  border-color: #41EEFF;
-  color: #41EEFF;
+  border-color: #0000FF;
+  color: #0000FF;
   -webkit-transition: background-color 300ms ease-out;
           transition: background-color 300ms ease-out; }
   button:hover,
@@ -2011,11 +2011,11 @@ button, .button {
   button:hover,
   button:focus, .button:hover,
   .button:focus {
-    color: #41EEFF; }
+    color: #0000FF; }
   button.secondary, .button.secondary {
     background-color: transparent;
     border-color: #fff;
-    color: #41EEFF; }
+    color: #0000FF; }
     button.secondary:hover,
     button.secondary:focus, .button.secondary:hover,
     .button.secondary:focus {
@@ -2023,11 +2023,11 @@ button, .button {
     button.secondary:hover,
     button.secondary:focus, .button.secondary:hover,
     .button.secondary:focus {
-      color: #41EEFF; }
+      color: #0000FF; }
   button.success, .button.success {
     background-color: transparent;
     border-color: #e6e6e6;
-    color: #41EEFF; }
+    color: #0000FF; }
     button.success:hover,
     button.success:focus, .button.success:hover,
     .button.success:focus {
@@ -2035,11 +2035,11 @@ button, .button {
     button.success:hover,
     button.success:focus, .button.success:hover,
     .button.success:focus {
-      color: #41EEFF; }
+      color: #0000FF; }
   button.alert, .button.alert {
     background-color: transparent;
     border-color: #e82f10;
-    color: #41EEFF; }
+    color: #0000FF; }
     button.alert:hover,
     button.alert:focus, .button.alert:hover,
     .button.alert:focus {
@@ -2047,11 +2047,11 @@ button, .button {
     button.alert:hover,
     button.alert:focus, .button.alert:hover,
     .button.alert:focus {
-      color: #41EEFF; }
+      color: #0000FF; }
   button.warning, .button.warning {
     background-color: transparent;
     border-color: #e87c10;
-    color: #41EEFF; }
+    color: #0000FF; }
     button.warning:hover,
     button.warning:focus, .button.warning:hover,
     .button.warning:focus {
@@ -2059,11 +2059,11 @@ button, .button {
     button.warning:hover,
     button.warning:focus, .button.warning:hover,
     .button.warning:focus {
-      color: #41EEFF; }
+      color: #0000FF; }
   button.info, .button.info {
     background-color: transparent;
     border-color: #80c4e0;
-    color: #41EEFF; }
+    color: #0000FF; }
     button.info:hover,
     button.info:focus, .button.info:hover,
     .button.info:focus {
@@ -2071,7 +2071,7 @@ button, .button {
     button.info:hover,
     button.info:focus, .button.info:hover,
     .button.info:focus {
-      color: #41EEFF; }
+      color: #0000FF; }
   button.large, .button.large {
     padding: 1.125rem 2.25rem 1.1875rem 2.25rem;
     font-size: 1.25rem; }
@@ -2097,8 +2097,8 @@ button, .button {
     border-radius: 1000px; }
   button.disabled, button[disabled], .button.disabled, .button[disabled] {
     background-color: transparent;
-    border-color: #41EEFF;
-    color: #41EEFF;
+    border-color: #0000FF;
+    color: #0000FF;
     box-shadow: none;
     cursor: default;
     opacity: 0.7; }
@@ -2113,7 +2113,7 @@ button, .button {
     button[disabled]:focus, .button.disabled:hover,
     .button.disabled:focus, .button[disabled]:hover,
     .button[disabled]:focus {
-      color: #41EEFF; }
+      color: #0000FF; }
     button.disabled:hover,
     button.disabled:focus, button[disabled]:hover,
     button[disabled]:focus, .button.disabled:hover,
@@ -2123,7 +2123,7 @@ button, .button {
     button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, .button[disabled].secondary {
       background-color: transparent;
       border-color: #fff;
-      color: #41EEFF;
+      color: #0000FF;
       box-shadow: none;
       cursor: default;
       opacity: 0.7; }
@@ -2138,7 +2138,7 @@ button, .button {
       button[disabled].secondary:focus, .button.disabled.secondary:hover,
       .button.disabled.secondary:focus, .button[disabled].secondary:hover,
       .button[disabled].secondary:focus {
-        color: #41EEFF; }
+        color: #0000FF; }
       button.disabled.secondary:hover,
       button.disabled.secondary:focus, button[disabled].secondary:hover,
       button[disabled].secondary:focus, .button.disabled.secondary:hover,
@@ -2148,7 +2148,7 @@ button, .button {
     button.disabled.success, button[disabled].success, .button.disabled.success, .button[disabled].success {
       background-color: transparent;
       border-color: #e6e6e6;
-      color: #41EEFF;
+      color: #0000FF;
       box-shadow: none;
       cursor: default;
       opacity: 0.7; }
@@ -2163,7 +2163,7 @@ button, .button {
       button[disabled].success:focus, .button.disabled.success:hover,
       .button.disabled.success:focus, .button[disabled].success:hover,
       .button[disabled].success:focus {
-        color: #41EEFF; }
+        color: #0000FF; }
       button.disabled.success:hover,
       button.disabled.success:focus, button[disabled].success:hover,
       button[disabled].success:focus, .button.disabled.success:hover,
@@ -2173,7 +2173,7 @@ button, .button {
     button.disabled.alert, button[disabled].alert, .button.disabled.alert, .button[disabled].alert {
       background-color: transparent;
       border-color: #e82f10;
-      color: #41EEFF;
+      color: #0000FF;
       box-shadow: none;
       cursor: default;
       opacity: 0.7; }
@@ -2188,7 +2188,7 @@ button, .button {
       button[disabled].alert:focus, .button.disabled.alert:hover,
       .button.disabled.alert:focus, .button[disabled].alert:hover,
       .button[disabled].alert:focus {
-        color: #41EEFF; }
+        color: #0000FF; }
       button.disabled.alert:hover,
       button.disabled.alert:focus, button[disabled].alert:hover,
       button[disabled].alert:focus, .button.disabled.alert:hover,
@@ -2198,7 +2198,7 @@ button, .button {
     button.disabled.warning, button[disabled].warning, .button.disabled.warning, .button[disabled].warning {
       background-color: transparent;
       border-color: #e87c10;
-      color: #41EEFF;
+      color: #0000FF;
       box-shadow: none;
       cursor: default;
       opacity: 0.7; }
@@ -2213,7 +2213,7 @@ button, .button {
       button[disabled].warning:focus, .button.disabled.warning:hover,
       .button.disabled.warning:focus, .button[disabled].warning:hover,
       .button[disabled].warning:focus {
-        color: #41EEFF; }
+        color: #0000FF; }
       button.disabled.warning:hover,
       button.disabled.warning:focus, button[disabled].warning:hover,
       button[disabled].warning:focus, .button.disabled.warning:hover,
@@ -2223,7 +2223,7 @@ button, .button {
     button.disabled.info, button[disabled].info, .button.disabled.info, .button[disabled].info {
       background-color: transparent;
       border-color: #80c4e0;
-      color: #41EEFF;
+      color: #0000FF;
       box-shadow: none;
       cursor: default;
       opacity: 0.7; }
@@ -2238,7 +2238,7 @@ button, .button {
       button[disabled].info:focus, .button.disabled.info:hover,
       .button.disabled.info:focus, .button[disabled].info:hover,
       .button[disabled].info:focus {
-        color: #41EEFF; }
+        color: #0000FF; }
       button.disabled.info:hover,
       button.disabled.info:focus, button[disabled].info:hover,
       button[disabled].info:focus, .button.disabled.info:hover,
@@ -2391,12 +2391,12 @@ td {
 
 /* Default Link Styles */
 a {
-  color: #41EEFF;
+  color: #0000FF;
   text-decoration: none;
   line-height: inherit; }
   a:hover,
   a:focus {
-    color: #14eaff; }
+    color: #0000db; }
   a img {
     border: none; }
 
@@ -2421,14 +2421,14 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica", sans-serif;
   font-weight: bold;
   font-style: normal;
-  color: #41EEFF;
+  color: #0000FF;
   text-rendering: optimizeLegibility;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
   line-height: 1.4; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     font-size: 60%;
-    color: #84f4ff;
+    color: #5959ff;
     line-height: 0; }
 
 h1 {
@@ -2451,7 +2451,7 @@ h6 {
 
 .subheader {
   line-height: 1.4;
-  color: #84f4ff;
+  color: #5959ff;
   font-weight: normal;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem; }
@@ -2482,10 +2482,10 @@ code {
   font-family: Consolas, "Liberation Mono", Courier, monospace;
   font-weight: normal;
   color: #333333;
-  background-color: #c7c7c7;
+  background-color: #ffb3b3;
   border-width: 1px;
   border-style: solid;
-  border-color: #b3b3b3;
+  border-color: #ff8787;
   padding: 0.125rem 0.3125rem 0.0625rem; }
 
 /* Lists */
@@ -2571,17 +2571,17 @@ blockquote {
   blockquote cite {
     display: block;
     font-size: 0.8125rem;
-    color: #6df2ff; }
+    color: #3b3bff; }
     blockquote cite:before {
       content: "\2014 \0020"; }
     blockquote cite a,
     blockquote cite a:visited {
-      color: #6df2ff; }
+      color: #3b3bff; }
 
 blockquote,
 blockquote p {
   line-height: 1.6;
-  color: #84f4ff; }
+  color: #5959ff; }
 
 /* Microformats */
 .vcard {
@@ -4013,7 +4013,7 @@ throughout this theme's SASS files.
 a.color-invert {
   color: inherit; }
   a.color-invert:hover {
-    color: #14eaff; }
+    color: #0000db; }
 
 ul {
   margin: 0;
@@ -4023,21 +4023,22 @@ button, .button {
   -webkit-transition: border 300ms, color 300ms, background-color 300ms;
           transition: border 300ms, color 300ms, background-color 300ms; }
   button:hover, .button:hover {
-    border-color: #21ebff;
-    color: #21ebff; }
+    border-color: #0000e6;
+    color: #0000e6; }
   button:active, button:focus, .button:active, .button:focus {
     color: inherit; }
   button.fill, .button.fill {
-    background-color: #41EEFF;
+    background-color: #0000FF;
     color: #fff;
     border: none; }
     button.fill:active, button.fill:focus, .button.fill:active, .button.fill:focus {
       color: #fff; }
     button.fill:hover, .button.fill:hover {
-      background-color: #27ecff;
+      background-color: #0000e6;
       color: #fff; }
   button.secondary, .button.secondary {
-    color: #fff; }
+    color: #FF0000;
+    border-color: #FF0000; }
     button.secondary:active, button.secondary:focus, .button.secondary:active, .button.secondary:focus {
       color: #fff; }
     button.secondary:hover, .button.secondary:hover {
@@ -4065,16 +4066,16 @@ button, .button {
     color: #3c9b5f; }
 
 ::-moz-selection {
-  background: #41EEFF;
-  color: #002B50; }
+  background: #0000FF;
+  color: #aaa; }
 
 ::selection {
-  background: #41EEFF;
-  color: #002B50; }
+  background: #0000FF;
+  color: #aaa; }
 
 ::-moz-selection {
-  background: #41EEFF;
-  color: #002B50; }
+  background: #0000FF;
+  color: #aaa; }
 
 .screen-reader-text {
   display: none; }
@@ -4108,10 +4109,15 @@ throughout this theme's SASS files.
 
 @since 0.1.0
 */
+#top-bar {
+  background: #aaa;
+  font-size: 1.25em; }
+
 #site-header {
-  background: #002B50;
+  background: #ccc;
   padding: 1em 0.5em;
-  border-bottom: 3px solid #41EEFF; }
+  padding-bottom: 0;
+  border-bottom: 3px solid #0000FF; }
   @media only screen and (max-width: 40em) {
     #site-header .logo {
       margin-bottom: 10px; } }
@@ -4119,51 +4125,80 @@ throughout this theme's SASS files.
     width: 150px;
     display: inline-block; }
   #site-header .phone-number .fa.fa-phone {
-    color: #41EEFF;
+    color: #0000FF;
     text-decoration: none;
     line-height: inherit; }
     #site-header .phone-number .fa.fa-phone img {
       border: none; }
   #site-header .top-nav {
-    margin: 0 1em; }
+    background: #aaa;
+    margin-top: 1em;
+    margin-bottom: 3px; }
     #site-header .top-nav .menu {
-      margin: 0; }
-    #site-header .top-nav .menu-item {
-      display: inline-block;
-      color: #fff;
-      font-size: 0.8em; }
-      #site-header .top-nav .menu-item:not(:first-of-type):before {
-        content: '|';
-        margin: 0 0.5em; }
-      #site-header .top-nav .menu-item a {
-        color: inherit; }
+      margin: 0;
+      list-style: none;
+      color: #0000FF;
+      padding: 0 0.5em; }
+      @media only screen and (max-width: 40em) {
+        #site-header .top-nav .menu {
+          padding: 0; } }
+      #site-header .top-nav .menu > .menu-item {
+        position: relative;
+        float: left;
+        text-align: center; }
+        @media only screen and (max-width: 40em) {
+          #site-header .top-nav .menu > .menu-item {
+            float: none;
+            text-align: center;
+            width: 100% !important;
+            border-top: 3px solid #aaa; } }
+        @media only screen and (min-width: 40.063em) {
+          #site-header .top-nav .menu > .menu-item:hover .sub-menu {
+            display: block; } }
+        @media only screen and (min-width: 40.063em) {
+          #site-header .top-nav .menu > .menu-item:hover > a {
+            background: #FF0000;
+            color: #fff; } }
+        @media only screen and (max-width: 40em) {
+          #site-header .top-nav .menu > .menu-item:first-of-type {
+            border-top: none; } }
+        #site-header .top-nav .menu > .menu-item:first-of-type a {
+          border-left: 3px solid #aaa; }
+        #site-header .top-nav .menu > .menu-item > a {
+          display: block;
+          color: inherit;
+          padding: 0.5em 1em;
+          border-right: 3px solid #aaa; }
+          @media only screen and (max-width: 40em) {
+            #site-header .top-nav .menu > .menu-item > a {
+              display: inline-block;
+              border: none !important; } }
+    #site-header .top-nav .sub-menu {
+      position: absolute;
+      bottom: 100%;
+      white-space: nowrap;
+      list-style: none;
+      margin: 0;
+      display: none;
+      width: 100%;
+      padding-right: 3px;
+      z-index: 50; }
+      #site-header .top-nav .sub-menu .menu-item:last-of-type a {
+        border-bottom: none; }
+      #site-header .top-nav .sub-menu a {
+        display: block;
+        color: inherit;
+        padding: 0.5em;
+        background: #0000FF;
+        border-bottom: 1px solid #0000e6; }
+        #site-header .top-nav .sub-menu a:hover {
+          background: #0000e6; }
   #site-header .search-form .search-field {
     width: 100%; }
   #site-header .phone {
     color: #fff;
     font-weight: bold;
     font-size: 2em; }
-  #site-header .bible-verse {
-    color: #fff;
-    font-style: italic;
-    font-size: 0.8em; }
-    #site-header .bible-verse a {
-      color: inherit; }
-
-.mobile-search {
-  border-bottom: 3px solid #002B50;
-  margin-bottom: 15px; }
-  .mobile-search form, .mobile-search input {
-    margin: 0; }
-
-.mobile-bible-verse {
-  color: inherit;
-  font-style: italic;
-  font-size: 0.8em;
-  padding-left: 5%;
-  padding-right: 5%; }
-  .mobile-bible-verse a {
-    color: inherit; }
 
 /*
 The static site body.
@@ -4194,7 +4229,7 @@ throughout this theme's SASS files.
 #site-footer {
   margin-top: 30px; }
   #site-footer .primary-nav {
-    background: #002B50;
+    background: #aaa;
     margin-bottom: 3px; }
     #site-footer .primary-nav .menu {
       margin: 0;
@@ -4219,7 +4254,7 @@ throughout this theme's SASS files.
             display: block; } }
         @media only screen and (min-width: 40.063em) {
           #site-footer .primary-nav .menu > .menu-item:hover > a {
-            background: #41EEFF; } }
+            background: #0000FF; } }
         @media only screen and (max-width: 40em) {
           #site-footer .primary-nav .menu > .menu-item:first-of-type {
             border-top: none; } }
@@ -4250,15 +4285,15 @@ throughout this theme's SASS files.
         display: block;
         color: inherit;
         padding: 0.5em;
-        background: #41EEFF;
-        border-bottom: 1px solid #27ecff; }
+        background: #0000FF;
+        border-bottom: 1px solid #0000e6; }
         #site-footer .primary-nav .sub-menu a:hover {
-          background: #27ecff; }
+          background: #0000e6; }
   #site-footer .footer-menu {
     color: #b3b3b3;
     font-size: 0.7em;
     padding: 1em 0.5em;
-    background: #002B50; }
+    background: #aaa; }
     #site-footer .footer-menu a {
       color: inherit; }
     #site-footer .footer-menu ul {
@@ -4277,7 +4312,7 @@ throughout this theme's SASS files.
         font-weight: normal;
         font-size: 0.8em; }
   #site-footer .footer-mobile {
-    background: #002B50;
+    background: #aaa;
     color: #fff;
     font-size: 2em;
     font-weight: bold; }

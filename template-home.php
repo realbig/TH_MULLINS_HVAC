@@ -29,7 +29,7 @@ the_post();
                     </div>
                     <div class="medium-6 small-12 columns cta-text">
                         <?php echo get_theme_mod( 'cta_service_call_text', '<p>Enter Text Using the Customizer</p>' ); ?>
-                        <a href="#" data-reveal-id="cta-modal" class = "button">Schedule a Service Call Today!</a>
+                        <a href="#" data-reveal-id="cta-modal" class = "secondary button">Schedule a Service Call Today!</a>
                     </div>
                 </section>
                 <section id="dependability_promise" role="tabpanel" aria-hidden="true" class="content">

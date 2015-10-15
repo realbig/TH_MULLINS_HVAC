@@ -8,15 +8,15 @@ throughout this theme's SASS files.
 @import "../vendor/sass/foundation/functions";
 
 // Grayscale colors
-$dark-color: #002B50;
-$medium-color: #444;
+$dark-color: #aaa;
+$medium-color: #ccc;
 $light-color: #fff;
 
 // Extra colors
 
 // We use these as default colors throughout
-$primary-color: #41EEFF;
-$secondary-color: $medium-color;
+$primary-color: #0000FF;
+$secondary-color: #FF0000;
 $alert-color: #f04124;
 $success-color: #43AC6A;
 $warning-color: #f08a24;
