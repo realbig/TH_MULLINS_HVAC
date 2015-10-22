@@ -36,12 +36,11 @@ the_post();
                     $max_grid = get_theme_mod( 'mullins_grid_columns', 3 );
                     $remainder = count( $services_children ) % $max_grid;
 
-                    $count_without_remainder = count( $services_children ) - $remainder;
                     $index = 0;
 
                     global $post;
 
-                    while ( $index < $count_without_remainder ) {
+                    while ( $index < $remainder ) {
                         $post = $services_children[$index];
 
                         setup_postdata( $post );
@@ -49,7 +48,7 @@ the_post();
 
                                     ?>
                                     <a href = "<?php the_permalink(); ?>">
-                                        <div id = "<?php echo $title; ?>_grid_item" class="medium-<?php echo (12/$max_grid); ?> small-12 columns fill button">
+                                        <div id = "<?php echo $title; ?>_grid_item" class="medium-<?php echo (12/$remainder); ?> small-12 columns fill button">
                                             <span class = "<?php echo get_theme_mod( 'mullins_' . $title . '_icon', 'fa fa-flag' ); ?>"></i>
                                             <h3><?php the_title(); ?></h3>
                                         </div>
@@ -66,7 +65,7 @@ the_post();
 
                                     ?>
                                     <a href = "<?php the_permalink(); ?>">
-                                        <div id = "<?php echo $title; ?>_grid_item" class="medium-<?php echo (12/$remainder); ?> small-12 columns fill button">
+                                        <div id = "<?php echo $title; ?>_grid_item" class="medium-<?php echo (12/$max_grid); ?> small-12 columns fill button">
                                             <span class = "<?php echo get_theme_mod( 'mullins_' . $title . '_icon', 'fa fa-flag' ); ?>"></i>
                                             <h3><?php the_title(); ?></h3>
                                         </div>

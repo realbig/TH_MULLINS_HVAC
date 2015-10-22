@@ -35,10 +35,15 @@ Styles shared among all templates.
       color: #000;
     }
 
+    .row {
+        padding: ( $column-gutter / 2 ) 0 ( $column-gutter / 2 ) 0;
+    }
+
     .button {
       margin: 0;
       border-top: none;
       border-bottom: none;
+      width: 100%;
     }
 
     .vertical-center {

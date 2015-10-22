@@ -4366,10 +4366,13 @@ throughout this theme's SASS files.
   #services h3, #services .fa, #services .wi {
     text-align: center;
     color: #000; }
+  #services .row {
+    padding: 0.9375rem 0 0.9375rem 0; }
   #services .button {
     margin: 0;
     border-top: none;
-    border-bottom: none; }
+    border-bottom: none;
+    width: 100%; }
   @media only screen and (max-width: 40em) {
     #services .vertical-center {
       margin-top: 0 !important; } }
