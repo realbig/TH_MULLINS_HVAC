@@ -30,8 +30,6 @@ if ( ! isset( $_SESSION ) ) {
 	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/vendor/js/html5.js"></script>
 	<![endif]-->
 
-    <title><?php wp_title( '|', true, 'right' ); ?></title>
-
 	<?php wp_head(); ?>
 </head>
 

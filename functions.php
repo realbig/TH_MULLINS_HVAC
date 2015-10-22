@@ -61,11 +61,11 @@ add_action( 'after_setup_theme', function () {
     // Add Customizer Preview JavaScript
     add_action( 'customize_preview_init', 'mullins_customizer_live_preview' );
 
+    // Add theme support
+	require_once __DIR__ . '/includes/theme-support.php';
+
 	// Allow shortcodes in text widget
 	add_filter( 'widget_text', 'do_shortcode' );
-    
-    // Spruce up wp_title();
-    add_filter( 'wp_title', 'mullins_wp_title', 10, 2 );
 
 } );
 
@@ -442,37 +442,5 @@ function mullins_template( $template ) {
 	}
     
 }
-
-/**
- * Spruce up wp_title() to be a bit more useful.
- *
- * @since 0.2.0
- *
- * @param string $title page <title>.
- * @param string $sep <title> separator.
- */
-function mullins_wp_title( $title, $sep ) {
-
-	global $paged, $page;
-
-	if ( is_feed() )
-		return $title;
-
-	// Add the site name.
-	$title .= get_bloginfo( 'name' );
-
-	// Add the site description for the home/front page.
-	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) )
-		$title = "$title $sep $site_description";
-
-	// Add a page number if necessary.
-	if ( $paged >= 2 || $page >= 2 )
-		$title = "$title $sep " . sprintf( __( 'Page %s', THEME_ID ), max( $paged, $page ) );
-
-	return $title;
-
-}
-
 
 require_once __DIR__ . '/includes/theme-functions.php';
