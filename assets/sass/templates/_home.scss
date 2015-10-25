@@ -19,6 +19,20 @@ body.home {
     }
   }
 
+  #testimonial {
+    .testimonial-copy, .testimonial-copy p {
+      color: #888;
+      font-style: italic;
+      margin: 0;
+    }
+    .testimonial-copy {
+      border-right: 1px solid $gainsboro;
+    }
+    .aligncenter {
+      margin: 0 auto;
+    }
+  }
+
   #home-cta {
 
     padding: 1em;

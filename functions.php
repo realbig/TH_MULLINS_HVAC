@@ -443,4 +443,99 @@ function mullins_template( $template ) {
     
 }
 
+/**
+ * Creates the Testimonials CPT
+ *
+ * @since 0.2.0
+ */
+add_action( 'init', 'register_cpt_mullins_testimonial' );
+function register_cpt_mullins_testimonial() {
+
+    $labels = array(
+        'name' => _x( 'Testimonial', THEME_ID ),
+        'all_items' => __( 'All Testimonials', THEME_ID ),
+        'singular_name' => _x( 'Testimonial', THEME_ID ),
+        'add_new' => _x( 'Add New Testimonial', THEME_ID ),
+        'add_new_item' => _x( 'Add New Testimonial', THEME_ID ),
+        'edit_item' => _x( 'Edit Testimonial', THEME_ID ),
+        'new_item' => _x( 'New Testimonial', THEME_ID ),
+        'view_item' => _x( 'View Testimonial', THEME_ID ),
+        'search_items' => _x( 'Search Testimonials', THEME_ID ),
+        'not_found' => _x( 'No Testimonials found', THEME_ID ),
+        'not_found_in_trash' => _x( 'No Testimonials found in Trash', THEME_ID ),
+        'parent_item_colon' => _x( 'Parent Testimonial:', THEME_ID ),
+        'menu_name' => _x( 'Testimonials', THEME_ID ),
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'menu_icon' => 'dashicons-awards',
+        'hierarchical' => false,
+        'description' => 'testimonial',
+        'supports' => array( 'title', 'editor', 'author' ),
+        'public' => false,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_position' => 5,
+
+        'show_in_nav_menus' => true,
+        'publicly_queryable' => true,
+        'exclude_from_search' => false,
+        'has_archive' => false,
+        'query_var' => true,
+        'can_export' => true,
+        'rewrite' => array(
+            'slug' => 'testimonial',
+            'with_front' => false,
+            'feeds' => false,
+            'pages' => true
+        ),
+		'capability_type' => 'post',
+		/*
+        'capability_type' => 'testimonial',
+        'capabilities' => array(
+            // Singular
+            'edit_post'	=>	'edit_testimonial',
+            'read_post'	=>	'read_testimonial',
+            'delete_post'	=>	'delete_testimonial',
+            // Plural
+            'edit_posts'	=>	'edit_testimonials',
+            'edit_others_posts'	=>	'edit_others_testimonials',
+            'publish_posts'	=>	'publish_testimonials',
+            'read_private_posts'	=>	'read_private_testimonials',
+            'delete_posts'	=>	'delete_testimonials',
+            'delete_private_posts'	=>	'delete_private_testimonials',
+            'delete_published_posts'	=>	'delete_published_testimonials',
+            'delete_others_posts'	=>	'delete_others_testimonials',
+            'edit_private_posts'	=>	'edit_private_testimonials',
+            'edit_published_posts'	=>	'edit_published_testimonials',
+        ),
+		*/
+    );
+
+    register_post_type( 'mullins_testimonial', $args );
+
+}
+
+/*
+ * Makes Testimonial Gravity Form submit to the correct Post Type
+ *
+ * @param array $post_data The Post Data being filtered
+ * @param Object $form The Form being processed
+ * @param Object $entry The Entry being processed
+ *
+ * @since 0.2.0
+ */
+add_filter( 'gform_post_data', 'change_testimonials_form_post_type', 10, 3 );
+function change_testimonials_form_post_type( $post_data, $form, $entry ) {
+
+    if ( $form['id'] != 1 ) {
+       return $post_data;
+    }
+
+    $post_data['post_type'] = 'mullins_testimonial';
+    return $post_data;
+
+}
+
 require_once __DIR__ . '/includes/theme-functions.php';

@@ -137,6 +137,50 @@ the_post();
 
             </div>
 
+            <?php
+
+                global $post;
+
+                $post = get_posts( array(
+                    'orderby' => 'rand', // Random Testimonial. The more available, the more Random it seems.
+                    'posts_per_page' => 1,
+                    'post_type' => 'mullins_testimonial',
+                    'post_status' => 'publish',
+                ) );
+
+                $post = $post[0];
+
+                setup_postdata( $post );
+
+            if ( $post ) {
+
+            ?>
+
+            <div id="testimonial">
+
+                <div class="row">
+                    <div class="small-12 columns aligncenter">
+                        <blockquote class="testimonial-copy"><?php the_content(); ?></blockquote>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 columns text-right">
+                        <h4>&mdash; <?php the_title(); ?> &mdash;</h4>
+                        <a href="#" data-reveal-id="testimonial-modal">Leave Your Own Testimonial</a>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <?php
+
+            }
+
+            ?>
+
+            <?php wp_reset_postdata(); ?>
+
             <div class = "page-copy">
 
                 <?php the_content(); ?>
@@ -150,5 +194,6 @@ the_post();
 <?php
 
 mullins_template( 'modal-service_call' );
+mullins_template( 'modal-testimonial_entry' );
 
 get_footer();
