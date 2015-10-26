@@ -325,7 +325,7 @@ add_action( 'init', function () {
 		true
 	);
 
-    wp_localize_script( THEME_ID, 'cta_colors', array( 'serviceCall' => get_theme_mod( 'cta_service_call_color', '#41EEFF' ), 'dependabilityPromise' => get_theme_mod( 'cta_dependability_promise_color', '#002B50' ) ) );
+    wp_localize_script( THEME_ID, THEME_ID . '_data', array( 'serviceCall' => get_theme_mod( 'cta_service_call_color', '#41EEFF' ), 'dependabilityPromise' => get_theme_mod( 'cta_dependability_promise_color', '#002B50' ), 'ajaxUrl' => admin_url( 'admin-ajax.php' ) ) );
 
     // Admin script
     wp_register_script(
@@ -535,6 +535,44 @@ function change_testimonials_form_post_type( $post_data, $form, $entry ) {
 
     $post_data['post_type'] = 'mullins_testimonial';
     return $post_data;
+
+}
+
+/*
+ * Allows Testimonials to be Random while getting around WP Engine's RAND limitations
+ *
+ * @since 0.2.0
+ */
+// The AJAX call is given "get_testimonial" which corresponds with the WordPress Action Hook.
+add_action('wp_ajax_get_testimonial', 'get_mullins_testimonial_callback');
+add_action('wp_ajax_nopriv_get_testimonial', 'get_mullins_testimonial_callback');
+function get_mullins_testimonial_callback() {
+
+    global $post;
+
+	$testimonials = get_posts( array(
+        'posts_per_page' => -1,
+        'post_type' => 'mullins_testimonial',
+        'post_status' => 'publish',
+    ) );
+
+    $items = array(); // Create an Array for the JSON
+
+    foreach ( $testimonials as $post ) {
+        setup_postdata( $post );
+
+        $items[] = array(
+            'name' => get_the_title(),
+            'body' => get_the_content(),
+        );
+
+    }
+
+    wp_reset_postdata();
+
+    echo json_encode( $items );
+
+    die();
 
 }
 

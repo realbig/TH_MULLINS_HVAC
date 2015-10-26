@@ -4435,6 +4435,12 @@ body.home #testimonial .testimonial-copy {
 body.home #testimonial .aligncenter {
   margin: 0 auto; }
 
+body.home #testimonial .testimonial-loading {
+  font-size: 4em; }
+
+body.home #testimonial .testimonial-content {
+  display: none; }
+
 body.home #home-cta {
   padding: 1em; }
   body.home #home-cta h2 {
