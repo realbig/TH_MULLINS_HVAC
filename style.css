@@ -4385,6 +4385,20 @@ body {
   margin-right: auto;
   max-width: initial; }
 
+li.widget {
+  list-style: none; }
+
+#newsletter .button {
+  background-color: #0C4E8B;
+  color: #fff;
+  border: none; }
+  #newsletter .button:active, #newsletter .button:focus {
+    color: #fff; }
+  #newsletter .button:hover {
+    background-color: transparent;
+    color: #0C4E8B;
+    border: 3px solid; }
+
 /*
 Styles single.php.
 
@@ -4451,6 +4465,14 @@ body.home #home-cta {
     text-transform: uppercase;
     font-weight: bold;
     margin: 0; }
+
+body.home #newsletter .widget {
+  background-color: #ebebeb;
+  padding: 30px; }
+
+body.home #newsletter .fa {
+  font-size: 2em;
+  margin-top: -0.2em; }
 
 /*
 This provides overrides for some WP stuff (not much at all).

@@ -69,3 +69,27 @@ body {
    margin-right: auto;
    max-width: initial;
 }
+
+li.widget {
+    list-style: none;
+}
+
+#newsletter {
+
+    .button {
+        background-color: $primary-color;
+        color: $light-color;
+        border: none;
+
+        &:active, &:focus {
+          color: $light-color;
+        }
+
+        &:hover {
+          background-color: transparent;
+          color: $primary-color;
+          border: 3px solid;
+        }
+    }
+
+}

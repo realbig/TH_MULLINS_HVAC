@@ -30,7 +30,11 @@ the_post();
 					<?php the_content(); ?>
 				</div>
 			</div>
-            <div class="medium-3 small-12 columns">
+            <div id="newsletter" class="medium-3 small-12 columns">
+                <?php
+                    // There's no way to utilize "after_widget" within the actual Widget Options
+                    the_widget( 'mailchimpSF_Widget', 'after_widget=<div class="text-right"><a href = "#">Terms and Conditions</a></div>');
+                ?>
                 <?php dynamic_sidebar( 'services-sub-page-sidebar' ); ?>
             </div>
             

@@ -59,4 +59,18 @@ body.home {
 
   }
 
+  #newsletter {
+
+    .widget {
+        background-color: $medium-color;
+        padding: $gutter;
+    }
+
+    .fa {
+        font-size: 2em;
+        margin-top: -0.2em;
+    }
+
+  }
+
 }

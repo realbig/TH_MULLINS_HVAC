@@ -160,6 +160,15 @@ the_post();
 
             </div>
 
+            <div id="newsletter" class="row">
+                <div class="small-12 columns">
+                    <?php
+                        // There's no way to utilize "after_widget" within the actual Widget Options
+                        the_widget( 'mailchimpSF_Widget', 'after_widget=<div class="text-right"><a href = "#">Terms and Conditions</a></div>&after_title=<span class="fa fa-envelope-o alignright"></h2>');
+                    ?>
+                </div>
+            </div>
+
             <div class = "page-copy">
 
                 <?php the_content(); ?>
