@@ -33,7 +33,7 @@ the_post();
             <div id="newsletter" class="medium-3 small-12 columns">
                 <?php
                     // There's no way to utilize "after_widget" within the actual Widget Options
-                    the_widget( 'mailchimpSF_Widget', 'after_widget=<div class="text-right"><a href = "#">Terms and Conditions</a></div>');
+                    the_widget( 'mailchimpSF_Widget', 'after_widget=<div class="text-right"><a href = "#" data-reveal-id="drawing-terms-modal">Terms and Conditions</a></div>');
                 ?>
                 <?php dynamic_sidebar( 'services-sub-page-sidebar' ); ?>
             </div>
@@ -42,4 +42,7 @@ the_post();
 	</section>
 
 <?php
+
+mullins_template( 'modal-drawing_terms' );
+
 get_footer();
