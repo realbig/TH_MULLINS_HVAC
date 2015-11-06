@@ -16,7 +16,16 @@ get_header();
 the_post();
 ?>
 
-<div id="home-cta" style = "background-color: <?php echo get_theme_mod( 'cta_service_call_color', '#41EEFF' ); ?>">
+<div id="home-cta" style = "background-image: url( '<?php echo get_theme_mod( 'cta_service_call_image', 'http://placehold.it/300x200' ); ?>' );">
+
+    <style type = "text/css">
+        .overlay:after {
+            background-color: <?php echo get_theme_mod( 'cta_service_call_color', '#41EEFF' ); ?>;
+        }
+    </style>
+
+    <div class="overlay">
+    </div>
 
     <div class="row">
         <div class="small-12 columns">

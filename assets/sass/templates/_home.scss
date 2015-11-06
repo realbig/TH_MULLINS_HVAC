@@ -45,6 +45,19 @@ body.home {
   #home-cta {
 
     padding: 1em;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .overlay:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.75;
+        height: 100%;
+        width: 100%;
+    }
 
     h2 {
         color: #000;

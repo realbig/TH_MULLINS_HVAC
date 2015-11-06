@@ -4459,7 +4459,18 @@ body.home #testimonial .testimonial-content {
   display: none; }
 
 body.home #home-cta {
-  padding: 1em; }
+  padding: 1em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+  body.home #home-cta .overlay:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.75;
+    height: 100%;
+    width: 100%; }
   body.home #home-cta h2 {
     color: #000; }
   body.home #home-cta .tabs li {

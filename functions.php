@@ -325,7 +325,7 @@ add_action( 'init', function () {
 		true
 	);
 
-    wp_localize_script( THEME_ID, THEME_ID . '_data', array( 'serviceCall' => get_theme_mod( 'cta_service_call_color', '#41EEFF' ), 'dependabilityPromise' => get_theme_mod( 'cta_dependability_promise_color', '#002B50' ), 'ajaxUrl' => admin_url( 'admin-ajax.php' ) ) );
+    wp_localize_script( THEME_ID, THEME_ID . '_data', array( 'serviceCallImage' => get_theme_mod( 'cta_service_call_image', 'http://placehold.it/300x200' ),'serviceCall' => get_theme_mod( 'cta_service_call_color', '#41EEFF' ), 'dependabilityPromise' => get_theme_mod( 'cta_dependability_promise_color', '#002B50' ), 'dependabilityPromiseImage' => get_theme_mod( 'cta_dependability_promise_image', 'http://placehold.it/300x200' ),'ajaxUrl' => admin_url( 'admin-ajax.php' ) ) );
 
     // Admin script
     wp_register_script(
