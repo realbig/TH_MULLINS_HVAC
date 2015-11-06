@@ -4389,15 +4389,16 @@ li.widget {
   list-style: none; }
 
 #newsletter .button {
-  background-color: #0C4E8B;
-  color: #fff;
-  border: none; }
+  background-color: transparent;
+  color: #0C4E8B;
+  border: 3px #0C4E8B solid;
+  text-transform: uppercase;
+  font-weight: bold; }
   #newsletter .button:active, #newsletter .button:focus {
     color: #fff; }
   #newsletter .button:hover {
-    background-color: transparent;
-    color: #0C4E8B;
-    border: 3px solid; }
+    color: #e6e6e6;
+    border: 3px #e6e6e6 solid; }
 
 /*
 Styles single.php.
@@ -4487,6 +4488,11 @@ body.home #newsletter .widget {
 body.home #newsletter .fa {
   font-size: 2em;
   margin-top: -0.2em; }
+
+body.home #newsletter .mc_signup_submit {
+  text-align: right; }
+  body.home #newsletter .mc_signup_submit input {
+    width: auto; }
 
 /*
 This provides overrides for some WP stuff (not much at all).
