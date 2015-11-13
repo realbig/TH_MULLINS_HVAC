@@ -23,7 +23,7 @@ The static site header.
     }
 
     a {
-      width: 150px;
+      width: 200px;
       display: inline-block;
     }
   }
@@ -145,12 +145,6 @@ The static site header.
     .search-field {
       width: 100%;
     }
-  }
-
-  .phone {
-    color: $light-color;
-    font-weight: bold;
-    font-size: 2em;
   }
 
 }

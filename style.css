@@ -4092,6 +4092,9 @@ button, .button {
   display: block;
   margin: 30px auto; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lora"; }
+
 /*
 The static site header.
 
@@ -4116,7 +4119,7 @@ throughout this theme's SASS files.
     #site-header .logo {
       margin-bottom: 10px; } }
   #site-header .logo a {
-    width: 150px;
+    width: 200px;
     display: inline-block; }
   #site-header .phone-number .fa.fa-phone {
     color: #0C4E8B;
@@ -4189,10 +4192,6 @@ throughout this theme's SASS files.
           background: #0a4174; }
   #site-header .search-form .search-field {
     width: 100%; }
-  #site-header .phone {
-    color: #fff;
-    font-weight: bold;
-    font-size: 2em; }
 
 /*
 The static site body.
@@ -4366,6 +4365,12 @@ throughout this theme's SASS files.
     border-top: none;
     border-bottom: none;
     width: 100%; }
+  #services .button:hover, #services .button:hover * {
+    color: #fff; }
+  #services .columns:nth-child(odd) .button:hover {
+    background-color: #C31A2F; }
+  #services .columns:nth-child(even) .button:hover {
+    background-color: #094C8B; }
   @media only screen and (max-width: 40em) {
     #services .vertical-center {
       margin-top: 0 !important; } }

@@ -151,7 +151,7 @@ the_post();
                 <div class="small-12 medium-4 columns text-center">
                     <div class="row">
                         <div class="small-12 columns">
-                            <img src="#" />
+                            <img src="//placeholdit.imgix.net/~text?txtsize=33&txt=Angie%27s+List+Badge&w=250&h=250&txttrack=0" />
                         </div>
                     </div>
                 </div>

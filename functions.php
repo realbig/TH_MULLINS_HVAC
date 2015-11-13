@@ -36,6 +36,7 @@ define( 'THEME_ID', 'mullins_theme' );
  */
 $mullins_fonts = array(
 	'Font Awesome' => '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css',
+    'Lora' => '//fonts.googleapis.com/css?family=Lora:700,700italic',
 );
 
 /**
