@@ -71,6 +71,7 @@ The static site footer.
           color: inherit;
           padding: 0.5em 1em;
           border-right: 3px solid $dark-color;
+          font-family: 'Lora';
 
           @media #{$small-only} {
             display: inline-block;

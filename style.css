@@ -4165,7 +4165,8 @@ throughout this theme's SASS files.
           display: block;
           color: inherit;
           padding: 0.5em 1em;
-          border-right: 3px solid #D6E0EB; }
+          border-right: 3px solid #D6E0EB;
+          font-family: 'Lora'; }
           @media only screen and (max-width: 40em) {
             #site-header .top-nav .menu > .menu-item > a {
               display: inline-block;
@@ -4260,7 +4261,8 @@ throughout this theme's SASS files.
           display: block;
           color: inherit;
           padding: 0.5em 1em;
-          border-right: 3px solid #D6E0EB; }
+          border-right: 3px solid #D6E0EB;
+          font-family: 'Lora'; }
           @media only screen and (max-width: 40em) {
             #site-footer .primary-nav .menu > .menu-item > a {
               display: inline-block;
@@ -4486,6 +4488,8 @@ body.home #home-cta {
     text-transform: uppercase;
     font-weight: bold;
     margin: 0; }
+  body.home #home-cta .tabs dd > a, body.home #home-cta .tabs .tab-title > a {
+    font-family: 'Lora'; }
 
 body.home #newsletter .widget {
   background-color: #ebebeb;
