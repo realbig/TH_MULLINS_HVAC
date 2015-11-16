@@ -173,6 +173,18 @@ function mullins_customize_register( $wp_customize ) {
         'settings'   => 'mullins_contact_shortcode',
     ) ) );
 
+    $wp_customize->add_setting( 'mullins_footer_columns' , array(
+            'default'     => 4,
+            'transport'   => 'refresh',
+        )
+    );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'mullins_footer_columns', array(
+        'type' => 'number',
+        'label'        => __( 'Footer Number of Columns/Widgets', THEME_ID ),
+        'section'    => 'mullins_customizer_section',
+        'settings'   => 'mullins_footer_columns',
+    ) ) );
+
     // Home Page Specific
 
     $wp_customize->add_section( 'mullins_home_customizer_section' , array(
@@ -408,6 +420,25 @@ add_action( 'widgets_init', function () {
 		'after_title'  => '</h3>',
 	) );
     
+    // Footer
+    $footer_columns = get_theme_mod( 'mullins_footer_columns', 4 );
+
+    for ( $index = 0; $index < $footer_columns; $index++ ) {
+
+        register_sidebar(
+            array(
+                'name'          =>  'Footer ' . ( $index + 1 ),
+                'id'            =>  'footer-' . ( $index + 1 ),
+                'description'   =>  '',
+                'before_widget' =>  '<aside id="%1$s" class="widget %2$s">',
+                'after_widget'  =>  '</aside>',
+                'before_title'  =>  '<h3 class="widget-title">',
+                'after_title'   =>  '</h3>',
+            )
+        );
+
+    }
+
 } );
 
 /**

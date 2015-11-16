@@ -4220,7 +4220,8 @@ throughout this theme's SASS files.
 @since 0.1.0
 */
 #site-footer {
-  margin-top: 30px; }
+  margin-top: 30px;
+  background: #ebebeb; }
   #site-footer .primary-nav {
     background: #ebebeb;
     border-bottom: 3px solid #D6E0EB; }
