@@ -36,26 +36,30 @@ if ( ! isset( $_SESSION ) ) {
 <body <?php body_class(); ?>>
 
 <div id="wrapper">
-    
-    <div id="top-bar" class="full-width">
-        <div class="row">
-            <div class="small-only-text-center">
-                <span class="phone-number medium-left"><span class="fa fa-phone"></span> <?php echo get_phone_number_link( get_theme_mod( 'mullins_phone_number', '(517) 867-5309' ) ); ?></span>
-                <span class = "show-for-small-only no-height"><br /></span>
-                <span class="facebook medium-right"><span class="fa fa-facebook-square"></span> <a href = "<?php echo get_theme_mod( 'mullins_facebook_url', 'http://facebook.com' ); ?>" target = "_blank">Follow Us On Facebook!</a></span>
-            </div>
-        </div>
-    </div>
 
 	<header id="site-header">
+
+        <div class = "row">
         
-		<div class="row">
-			<div class="logo small-text-center">
-				<a href="<?php bloginfo( 'url' ); ?>" title = "<?php bloginfo( 'name' ); ?> - Home">
+            <div class = "medium-4 small-12 columns">
+                <div class = "row">
+                    <div class = "small-12 columns">
+                        <h2 class="phone-number text-center"><span class="fa fa-phone"></span> <?php echo get_phone_number_link( get_theme_mod( 'mullins_phone_number', '(517) 867-5309' ) ); ?></h2>
+                    </div>
+                    <div class = "small-12 columns">
+                        <a href="<?php bloginfo( 'url' ); ?>" title = "<?php bloginfo( 'name' ); ?> - Home">
 					<img src="<?php echo get_theme_mod( 'mullins_logo_image', 'http://placehold.it/350x150' ); ?>" alt = "<?php bloginfo( 'name' ); ?>"/>
 				</a>
-			</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "medium-8 hide-for-small-only columns">
+                <?php echo do_shortcode( '[realbig_slider ids = "12,14" classes = "header-testimonials" arrows = false indicators = false]' ); ?>
+            </div>
+
         </div>
+
         <div class = "row">
 
 			<div class="container small-text-center show-for-medium-up">

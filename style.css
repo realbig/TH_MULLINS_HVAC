@@ -3187,6 +3187,14 @@ throughout this theme's SASS files.
   .button.xxlarge-expand {
     width: 100%; } }
 
+.valign-center {
+  display: table; }
+  .valign-center > .columns {
+    display: table-cell;
+    vertical-align: middle; }
+  .valign-center > .columns, .valign-center > [class*="column"] + [class*="column"]:last-child {
+    float: none; }
+
 @font-face {
   font-family: "weathericons";
   src: url("assets/vendor/fonts/weathericons-regular-webfont.eot");
@@ -4503,6 +4511,27 @@ body.home #newsletter .mc_signup_submit {
   text-align: right; }
   body.home #newsletter .mc_signup_submit input {
     width: auto; }
+
+header .realbig-slider-container {
+  margin: 0 auto 0; }
+  header .realbig-slider-container .realbig-slider.header-testimonials {
+    padding-top: 35%; }
+    header .realbig-slider-container .realbig-slider.header-testimonials .slide {
+      padding-top: 0; }
+
+.slide {
+  text-align: center;
+  padding-top: 25%;
+  background-size: cover; }
+
+.slide:nth-child(1) {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/163697/slide-1.jpg); }
+
+.slide:nth-child(2) {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/163697/slide-2.jpg); }
+
+.slide:nth-child(3) {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/163697/slide-3.jpg); }
 
 /*
 This provides overrides for some WP stuff (not much at all).
