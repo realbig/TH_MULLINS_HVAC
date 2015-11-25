@@ -41,7 +41,7 @@ The static site footer.
         }
 
         &:hover {
-          .sub-menu {
+          > .sub-menu {
             @media #{$medium-up} {
               display: block;
             }
@@ -53,6 +53,11 @@ The static site footer.
               background: $secondary-color;
             }
           }
+        }
+
+        &.current-menu-item {
+            background: darken($primary-color, 5%);
+            color: $light-color;
         }
 
         &:first-of-type {
@@ -100,14 +105,47 @@ The static site footer.
             border-bottom: none;
           }
         }
+
+          &:hover {
+
+            > .sub-menu {
+                @media #{$medium-up} {
+                    display: block;
+                    left: 99%;
+                    bottom: 0%;
+
+                    .menu-item {
+                        a {
+                            border: none;
+                        }
+
+                        &:hover a {
+                            background: darken($secondary-color, 5%);
+                            color: $light-color;
+                            border: none;
+                        }
+
+                    }
+
+                }
+            }
+
+          }
+
       }
 
       a {
         display: block;
-        color: inherit;
+        color: $light-color;
         padding: 0.5em;
         background: $primary-color;
         border-bottom: 1px solid darken($primary-color, 5%);
+
+          + .sub-menu a {
+              background: $secondary-color;
+              color: $light-color;
+              border: none;
+          }
 
         &:hover {
           background: darken($primary-color, 5%);

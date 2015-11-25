@@ -4158,7 +4158,7 @@ throughout this theme's SASS files.
             width: 100% !important;
             border-top: 3px solid #D6E0EB; } }
         @media only screen and (min-width: 40.063em) {
-          #site-header .top-nav .menu > .menu-item:hover .sub-menu {
+          #site-header .top-nav .menu > .menu-item:hover > .sub-menu {
             display: block; } }
         @media only screen and (min-width: 40.063em) {
           #site-header .top-nav .menu > .menu-item:hover > a {
@@ -4184,7 +4184,6 @@ throughout this theme's SASS files.
               border: none !important; } }
     #site-header .top-nav .sub-menu {
       position: absolute;
-      bottom: 100%;
       white-space: nowrap;
       list-style: none;
       margin: 0;
@@ -4194,14 +4193,33 @@ throughout this theme's SASS files.
       z-index: 50; }
       #site-header .top-nav .sub-menu .menu-item:last-of-type a {
         border-bottom: none; }
+      @media only screen and (min-width: 40.063em) {
+        #site-header .top-nav .sub-menu .menu-item:hover > .sub-menu {
+          display: block;
+          left: 99%;
+          bottom: 0%; }
+          #site-header .top-nav .sub-menu .menu-item:hover > .sub-menu .menu-item a {
+            border: none; }
+          #site-header .top-nav .sub-menu .menu-item:hover > .sub-menu .menu-item:hover a {
+            background: #b32c3d;
+            color: #fff;
+            border: none; } }
       #site-header .top-nav .sub-menu a {
         display: block;
-        color: inherit;
+        color: #fff;
         padding: 0.5em;
         background: #0C4E8B;
         border-bottom: 1px solid #0a4174; }
+        #site-header .top-nav .sub-menu a + .sub-menu a {
+          background: #C73144;
+          color: #fff;
+          border: none; }
         #site-header .top-nav .sub-menu a:hover {
           background: #0a4174; }
+          @media only screen and (min-width: 40.063em) {
+            #site-header .top-nav .sub-menu a:hover > a {
+              background: #C73144;
+              color: #fff; } }
   #site-header .search-form .search-field {
     width: 100%; }
 
@@ -4257,12 +4275,15 @@ throughout this theme's SASS files.
             width: 100% !important;
             border-top: 3px solid #fff; } }
         @media only screen and (min-width: 40.063em) {
-          #site-footer .primary-nav .menu > .menu-item:hover .sub-menu {
+          #site-footer .primary-nav .menu > .menu-item:hover > .sub-menu {
             display: block; } }
         @media only screen and (min-width: 40.063em) {
           #site-footer .primary-nav .menu > .menu-item:hover > a {
             color: #fff;
             background: #C73144; } }
+        #site-footer .primary-nav .menu > .menu-item.current-menu-item {
+          background: #0a4174;
+          color: #fff; }
         @media only screen and (max-width: 40em) {
           #site-footer .primary-nav .menu > .menu-item:first-of-type {
             border-top: none; } }
@@ -4290,12 +4311,27 @@ throughout this theme's SASS files.
       z-index: 50; }
       #site-footer .primary-nav .sub-menu .menu-item:last-of-type a {
         border-bottom: none; }
+      @media only screen and (min-width: 40.063em) {
+        #site-footer .primary-nav .sub-menu .menu-item:hover > .sub-menu {
+          display: block;
+          left: 99%;
+          bottom: 0%; }
+          #site-footer .primary-nav .sub-menu .menu-item:hover > .sub-menu .menu-item a {
+            border: none; }
+          #site-footer .primary-nav .sub-menu .menu-item:hover > .sub-menu .menu-item:hover a {
+            background: #b32c3d;
+            color: #fff;
+            border: none; } }
       #site-footer .primary-nav .sub-menu a {
         display: block;
-        color: inherit;
+        color: #fff;
         padding: 0.5em;
         background: #0C4E8B;
         border-bottom: 1px solid #0a4174; }
+        #site-footer .primary-nav .sub-menu a + .sub-menu a {
+          background: #C73144;
+          color: #fff;
+          border: none; }
         #site-footer .primary-nav .sub-menu a:hover {
           background: #0a4174; }
   #site-footer .footer-menu {

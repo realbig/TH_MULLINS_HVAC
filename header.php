@@ -131,7 +131,7 @@ if ( ! isset( $_SESSION ) ) {
 							wp_nav_menu( array(
 								'theme_location' => 'primary',
                                 'container'      => false,
-                                'depth'          => 2,
+                                'depth'          => 3,
                                 'walker'         => new Mullins_Walker_PrimaryNav( count( $items ) ),
 							) );
 

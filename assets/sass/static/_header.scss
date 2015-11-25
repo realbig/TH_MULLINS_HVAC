@@ -67,7 +67,7 @@ The static site header.
             }
 
             &:hover {
-              .sub-menu {
+              > .sub-menu {
                 @media #{$medium-up} {
                   display: block;
                 }
@@ -115,7 +115,6 @@ The static site header.
         // Second level deep (max)
         .sub-menu {
           position: absolute;
-          bottom: 100%;
           white-space: nowrap;
           list-style: none;
           margin: 0;
@@ -132,20 +131,62 @@ The static site header.
               }
             }
 
+              &:hover {
+
+                > .sub-menu {
+                    @media #{$medium-up} {
+                        display: block;
+                        left: 99%;
+                        bottom: 0%;
+
+                        .menu-item {
+                            a {
+                                border: none;
+                            }
+
+                            &:hover a {
+                                background: darken($secondary-color, 5%);
+                                color: $light-color;
+                                border: none;
+                            }
+
+                        }
+
+                    }
+                }
+
+              }
+
           }
 
           a {
             display: block;
-            color: inherit;
+            color: $light-color;
             padding: 0.5em;
             background: $primary-color;
             border-bottom: 1px solid darken($primary-color, 5%);
 
+              + .sub-menu a {
+                  background: $secondary-color;
+                  color: $light-color;
+                  border: none;
+              }
+
             &:hover {
               background: darken($primary-color, 5%);
+
+              > a {
+                @media #{$medium-up} {
+                  background: $secondary-color;
+                  color: $light-color;
+                }
+              }
             }
           }
         }
+
+
+
       }
 
   .search-form {
