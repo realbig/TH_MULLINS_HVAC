@@ -4523,6 +4523,15 @@ header .realbig-slider-container {
         font-style: italic;
         margin: 0;
         font-weight: 700; }
+    header .realbig-slider-container .realbig-slider.testimonials .add-testimonial {
+      position: absolute;
+      bottom: 1%;
+      right: 1%;
+      z-index: 5;
+      color: #fff;
+      text-decoration: underline; }
+      header .realbig-slider-container .realbig-slider.testimonials .add-testimonial:hover {
+        text-decoration: none; }
 
 /*
 This provides overrides for some WP stuff (not much at all).

@@ -71,17 +71,17 @@ if ( ! isset( $_SESSION ) ) {
 
                     ?>
 
-                    <div class = "realbig-slider-container">
-                        <div id = "#testimonial" class = "realbig-slider testimonials">
-                            <div class = "inner">
+                    <div class="realbig-slider-container">
+                        <div id="#testimonial" class="realbig-slider testimonials">
+                            <div class="inner">
                                 <?php
                                 foreach ( $testimonials as $post ) {
                                     setup_postdata( $post );
 
                                     $image_url = wp_get_attachment_url( get_post_thumbnail_id() );
                                     ?>
-                                    <div class = "slide valign-center<?php echo ( ( $first === true ) ? ' active' : '' ); ?>" style = "background-image: url(<?php echo $image_url; ?>)">
-                                        <div class = "overlay columns">
+                                    <div class="slide valign-center<?php echo ( ( $first === true ) ? ' active' : '' ); ?>" style = "background-image: url(<?php echo $image_url; ?>)">
+                                        <div class="overlay columns">
                                             <blockquote class = "testimonial-copy"><?php the_content(); ?></blockquote>
                                             <h4>&mdash; <?php the_title(); ?> &mdash;</h4>
                                         </div>
@@ -92,7 +92,8 @@ if ( ! isset( $_SESSION ) ) {
                                 }
                                 ?>
                             </div>
-                            <ul class = "indicators"></ul>
+                            <ul class="indicators"></ul>
+                            <a href="#" class="add-testimonial" data-reveal-id="testimonial-modal">Leave Your Own Testimonial</a>
                         </div>
                     </div>
 
