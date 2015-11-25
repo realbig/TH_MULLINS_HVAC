@@ -81,6 +81,11 @@ The static site header.
               }
             }
 
+            &.current-menu-item {
+                background: darken($primary-color, 5%);
+                color: $light-color;
+            }
+
             &:first-of-type {
 
               @media #{$small-only} {
@@ -126,6 +131,7 @@ The static site header.
                 border-bottom: none;
               }
             }
+
           }
 
           a {

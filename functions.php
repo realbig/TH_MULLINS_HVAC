@@ -504,7 +504,7 @@ function register_cpt_mullins_testimonial() {
         'menu_icon' => 'dashicons-awards',
         'hierarchical' => false,
         'description' => 'testimonial',
-        'supports' => array( 'title', 'editor', 'author' ),
+        'supports' => array( 'title', 'editor', 'author', 'thumbnail' ),
         'public' => false,
         'show_ui' => true,
         'show_in_menu' => true,

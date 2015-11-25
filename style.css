@@ -4164,6 +4164,9 @@ throughout this theme's SASS files.
           #site-header .top-nav .menu > .menu-item:hover > a {
             background: #C73144;
             color: #fff; } }
+        #site-header .top-nav .menu > .menu-item.current-menu-item {
+          background: #0a4174;
+          color: #fff; }
         @media only screen and (max-width: 40em) {
           #site-header .top-nav .menu > .menu-item:first-of-type {
             border-top: none; } }
@@ -4455,26 +4458,6 @@ body.home .page-content {
     body.home .page-content {
       margin: 30px 0; } }
 
-body.home #testimonial > .row {
-  padding: 0 0 0 0; }
-
-body.home #testimonial .testimonial-copy, body.home #testimonial .testimonial-copy p {
-  color: #888;
-  font-style: italic;
-  margin: 0; }
-
-body.home #testimonial .testimonial-copy {
-  border-right: 1px solid #DDDDDD; }
-
-body.home #testimonial .aligncenter {
-  margin: 0 auto; }
-
-body.home #testimonial .testimonial-loading {
-  font-size: 4em; }
-
-body.home #testimonial .testimonial-content {
-  display: none; }
-
 body.home #home-cta {
   padding: 1em;
   background-repeat: no-repeat;
@@ -4512,26 +4495,34 @@ body.home #newsletter .mc_signup_submit {
   body.home #newsletter .mc_signup_submit input {
     width: auto; }
 
+.realbig-slider-container .realbig-slider .arrow:hover {
+  border-color: #C31A2F; }
+
+.realbig-slider-container .realbig-slider .indicators li.active {
+  background: #094C8B; }
+
+.realbig-slider-container .realbig-slider .indicators li:hover {
+  background-color: #C31A2F; }
+
 header .realbig-slider-container {
   margin: 0 auto 0; }
-  header .realbig-slider-container .realbig-slider.header-testimonials {
+  header .realbig-slider-container .realbig-slider.testimonials {
     padding-top: 35%; }
-    header .realbig-slider-container .realbig-slider.header-testimonials .slide {
+    header .realbig-slider-container .realbig-slider.testimonials .slide {
+      background-size: cover;
+      text-align: center;
       padding-top: 0; }
-
-.slide {
-  text-align: center;
-  padding-top: 25%;
-  background-size: cover; }
-
-.slide:nth-child(1) {
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/163697/slide-1.jpg); }
-
-.slide:nth-child(2) {
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/163697/slide-2.jpg); }
-
-.slide:nth-child(3) {
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/163697/slide-3.jpg); }
+      header .realbig-slider-container .realbig-slider.testimonials .slide .overlay {
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 1% 0 1% 0; }
+      header .realbig-slider-container .realbig-slider.testimonials .slide h4, header .realbig-slider-container .realbig-slider.testimonials .slide .testimonial-copy, header .realbig-slider-container .realbig-slider.testimonials .slide .testimonial-copy p {
+        color: #fff; }
+      header .realbig-slider-container .realbig-slider.testimonials .slide .testimonial-copy {
+        border: none; }
+      header .realbig-slider-container .realbig-slider.testimonials .slide .testimonial-copy, header .realbig-slider-container .realbig-slider.testimonials .slide .testimonial-copy p {
+        font-style: italic;
+        margin: 0;
+        font-weight: 700; }
 
 /*
 This provides overrides for some WP stuff (not much at all).

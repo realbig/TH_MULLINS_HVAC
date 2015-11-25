@@ -55,7 +55,55 @@ if ( ! isset( $_SESSION ) ) {
             </div>
 
             <div class = "medium-8 hide-for-small-only columns">
-                <?php echo do_shortcode( '[realbig_slider ids = "12,14" classes = "header-testimonials" arrows = false indicators = false]' ); ?>
+
+<?php
+
+                    global $post;
+                    $first = true;
+
+                    $testimonials = get_posts( array(
+                        'post_type' => 'mullins_testimonial',
+                        'posts_per_page' => 5,
+                        'post_status' => 'publish',
+                    ) );
+
+                    if ( count( $testimonials ) > 0 ) {
+
+                    ?>
+
+                    <div class = "realbig-slider-container">
+                        <div id = "#testimonial" class = "realbig-slider testimonials">
+                            <div class = "inner">
+                                <?php
+                                foreach ( $testimonials as $post ) {
+                                    setup_postdata( $post );
+
+                                    $image_url = wp_get_attachment_url( get_post_thumbnail_id() );
+                                    ?>
+                                    <div class = "slide valign-center<?php echo ( ( $first === true ) ? ' active' : '' ); ?>" style = "background-image: url(<?php echo $image_url; ?>)">
+                                        <div class = "overlay columns">
+                                            <blockquote class = "testimonial-copy"><?php the_content(); ?></blockquote>
+                                            <h4>&mdash; <?php the_title(); ?> &mdash;</h4>
+                                        </div>
+
+                                    </div>
+                                    <?php
+                                    $first = false;
+                                }
+                                ?>
+                            </div>
+                            <ul class = "indicators"></ul>
+                        </div>
+                    </div>
+
+                    <?php
+
+                        wp_reset_postdata();
+
+                    }
+
+                    ?>
+                <?php //echo do_shortcode( '[realbig_slider ids = "12,14" classes = "header-testimonials" arrows = false indicators = false]' ); ?>
             </div>
 
         </div>
