@@ -54,14 +54,9 @@
 
     /* CTA */
 
-    wp.customize( 'cta_dependability_promise_color', function( value ) {
-		value.bind( function( newVal ) {
-			console.log( 'Due to how the Tab Toggles trigger, there is no good way to preview this. Neither through postMessage or Refresh.' );
-		} );
-	} );
     wp.customize( 'cta_service_call_image', function( value ) {
 		value.bind( function( newVal ) {
-			$( '#schedule_service_call img' ).attr( 'src', newVal );
+			$( '#home-cta' ).css( 'background-image', 'url(' + newVal + ')' );
 		} );
 	} );
     wp.customize( 'cta_dependability_promise_image', function( value ) {
@@ -70,7 +65,7 @@
 		} );
 	} );
 
-    wp.customize( 'angies_list_link', function( value ) {
+	wp.customize( 'angies_list_link', function( value ) {
 		value.bind( function( newVal ) {
 			$( '#angies-list-badge a' ).attr( 'href', newVal );
 		} );

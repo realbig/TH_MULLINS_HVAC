@@ -18,23 +18,13 @@ the_post();
 
 <div id="home-cta" style = "background-image: url( '<?php echo get_theme_mod( 'cta_service_call_image', 'http://placehold.it/300x200' ); ?>' );">
 
-    <style type = "text/css">
-        .overlay:after {
-            background-color: <?php echo get_theme_mod( 'cta_service_call_color', '#41EEFF' ); ?>;
-        }
-    </style>
-
-    <div class="overlay">
-    </div>
-
     <div class="row">
         <div class="small-12 columns">
 
             <div class="tabs-content">
                 <section id="schedule_service_call" role="tabpanel" aria-hidden="true" class="content active">
-                    <h2>Schedule a Service Call</h2>
                     <div class="medium-6 small-12 columns">
-                        <img src="<?php echo get_theme_mod( 'cta_service_call_image', 'http://placehold.it/300x200' ); ?>" alt = "Schedule a Service Call"/>
+
                     </div>
                     <div class="medium-6 small-12 columns cta-text">
                         <?php echo get_theme_mod( 'cta_service_call_text', '<p>Enter Text Using the Customizer</p>' ); ?>
@@ -42,9 +32,8 @@ the_post();
                     </div>
                 </section>
                 <section id="dependability_promise" role="tabpanel" aria-hidden="true" class="content">
-                    <h2>Dependability Promise</h2>
                     <div class="medium-6 small-12 columns">
-                        <img src="<?php echo get_theme_mod( 'cta_dependability_promise_image', 'http://placehold.it/300x200' ); ?>" alt = "Schedule a Service Call"/>
+
                     </div>
                     <div class="medium-6 small-12 columns cta-text">
                         <?php echo get_theme_mod( 'cta_dependability_promise_text', '<p>Enter Text Using the Customizer</p>' ); ?>
@@ -148,25 +137,19 @@ the_post();
 
             <div class="row">
 
-                <div class="small-12 medium-4 columns text-center">
-                    <div class="row">
-                        <div id="angies-list-badge" class="small-12 columns text-center">
-                            <a href="<?php echo get_theme_mod( 'angies_list_link', 'http://angieslist.com' ); ?>" title = "Review Us!">
-                                <img src="<?php echo get_theme_mod( 'angies_list_image', '//placeholdit.imgix.net/~text?txtsize=33&txt=Angie%27s+List+Badge&w=250&h=250&txttrack=0' ); ?>" />
-                            </a>
-                        </div>
-                    </div>
+                <div id="angies-list-badge" class="small-12 medium-4 columns text-center">
+                    <a href="<?php echo get_theme_mod( 'angies_list_link', 'http://angieslist.com' ); ?>" title = "Review Us!">
+                        <img src="<?php echo get_theme_mod( 'angies_list_image', 'http://placeholdit.imgix.net/~text?txtsize=33&txt=Angie%27s+List+Badge&w=250&h=250&txttrack=0' ); ?>" />
+                    </a>
                 </div>
 
-            </div>
-
-            <div id="newsletter" class="row">
-                <div class="small-12 columns">
+                <div id = "newsletter" class="small-12 medium-8 columns">
                     <?php
                         // There's no way to utilize "after_widget" within the actual Widget Options
                         the_widget( 'mailchimpSF_Widget', 'after_widget=<div class="text-right"><a href = "#" data-reveal-id="drawing-terms-modal">Terms and Conditions</a></div>&after_title=<span class="fa fa-envelope-o alignright"></h2>');
                     ?>
                 </div>
+
             </div>
 
             <div class = "page-copy">
