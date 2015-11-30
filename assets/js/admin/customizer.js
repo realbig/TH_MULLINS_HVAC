@@ -70,6 +70,17 @@
 		} );
 	} );
 
+    wp.customize( 'angies_list_link', function( value ) {
+		value.bind( function( newVal ) {
+			$( '#angies-list-badge a' ).attr( 'href', newVal );
+		} );
+	} );
+    wp.customize( 'angies_list_image', function( value ) {
+		value.bind( function( newVal ) {
+			$( '#angies-list-badge a img' ).attr( 'src', newVal );
+		} );
+	} );
+
     /* Services */
 
     wp.customize( 'mullins_indoor_air_quality_icon', function( value ) {

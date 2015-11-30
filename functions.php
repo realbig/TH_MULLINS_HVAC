@@ -262,6 +262,28 @@ function mullins_customize_register( $wp_customize ) {
         'settings'   => 'cta_dependability_promise_text',
     ) ) );
 
+    $wp_customize->add_setting( 'angies_list_link' , array(
+            'default'     => 'http://angieslist.com',
+            'transport'   => 'postMessage',
+        )
+    );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'angies_list_link', array(
+        'label'        => __( 'Angie\'s List Link URL', THEME_ID ),
+        'section'    => 'mullins_home_customizer_section',
+        'settings'   => 'angies_list_link',
+    ) ) );
+
+    $wp_customize->add_setting( 'angies_list_image' , array(
+            'default'     => '//placeholdit.imgix.net/~text?txtsize=33&txt=Angie%27s+List+Badge&w=250&h=250&txttrack=0',
+            'transport'   => 'postMessage',
+        )
+    );
+    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'angies_list_image', array(
+        'label'        => __( 'Angie\'s List Badge URL', THEME_ID ),
+        'section'    => 'mullins_home_customizer_section',
+        'settings'   => 'angies_list_image',
+    ) ) );
+
     $wp_customize->add_setting( 'mullins_grid_columns' , array(
             'default'     => 3,
             'transport'   => 'refresh',

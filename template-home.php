@@ -150,8 +150,10 @@ the_post();
 
                 <div class="small-12 medium-4 columns text-center">
                     <div class="row">
-                        <div class="small-12 columns">
-                            <img src="//placeholdit.imgix.net/~text?txtsize=33&txt=Angie%27s+List+Badge&w=250&h=250&txttrack=0" />
+                        <div id="angies-list-badge" class="small-12 columns text-center">
+                            <a href="<?php echo get_theme_mod( 'angies_list_link', 'http://angieslist.com' ); ?>" title = "Review Us!">
+                                <img src="<?php echo get_theme_mod( 'angies_list_image', '//placeholdit.imgix.net/~text?txtsize=33&txt=Angie%27s+List+Badge&w=250&h=250&txttrack=0' ); ?>" />
+                            </a>
                         </div>
                     </div>
                 </div>
