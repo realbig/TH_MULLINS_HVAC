@@ -26,14 +26,14 @@ body.home {
     background-size: cover;
     position: relative;
 
-    .overlay:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0.75;
-        height: 100%;
-        width: 100%;
+    .cta-text {
+        background-color: rgba( 0, 0, 0, 0.25 );
+        padding: 1em;
+
+        p {
+            font-weight: 700;
+        }
+
     }
 
     h2 {

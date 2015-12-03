@@ -9,17 +9,11 @@ jQuery( function( $ ) {
         if ( $( tab ).attr( 'id' ) == 'schedule_service_call' ) {
             
             $( '#home-cta' ).css( 'background-image', 'url( ' + mullins_theme_data.serviceCallImage + ')' );
-            $( '#home-cta .overlay:after' ).addRule( {
-                'background-color': mullins_theme_data.serviceCall + ' !important',
-            } );
             
         }
         else {
             
             $( '#home-cta' ).css( 'background-image', 'url( ' + mullins_theme_data.dependabilityPromiseImage + ')' );
-            $( '#home-cta .overlay:after' ).addRule( {
-                'background-color': mullins_theme_data.dependabilityPromise + ' !important',
-            } );
             
         }
         

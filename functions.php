@@ -194,17 +194,6 @@ function mullins_customize_register( $wp_customize ) {
         )
     );
 
-    $wp_customize->add_setting( 'cta_service_call_color' , array(
-            'default'     => '#41EEFF',
-            'transport'   => 'refresh',
-        )
-    );
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'cta_service_call_color', array(
-        'label'        => __( 'Service Call CTA Color', THEME_ID ),
-        'section'    => 'mullins_home_customizer_section',
-        'settings'   => 'cta_service_call_color',
-    ) ) );
-
     $wp_customize->add_setting( 'cta_service_call_image' , array(
             'default'     => 'http://placehold.it/300x200',
             'transport'   => 'postMessage',
@@ -226,17 +215,6 @@ function mullins_customize_register( $wp_customize ) {
         'label'        => __( 'Service Call Text', THEME_ID ),
         'section'    => 'mullins_home_customizer_section',
         'settings'   => 'cta_service_call_text',
-    ) ) );
-
-    $wp_customize->add_setting( 'cta_dependability_promise_color' , array(
-            'default'     => '#002B50',
-            'transport'   => 'postMessage',
-        )
-    );
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'cta_dependability_promise_color', array(
-        'label'        => __( 'Dependability Promise CTA Color', THEME_ID ),
-        'section'    => 'mullins_home_customizer_section',
-        'settings'   => 'cta_dependability_promise_color',
     ) ) );
 
     $wp_customize->add_setting( 'cta_dependability_promise_image' , array(
@@ -262,7 +240,7 @@ function mullins_customize_register( $wp_customize ) {
         'settings'   => 'cta_dependability_promise_text',
     ) ) );
 
-    $wp_customize->add_setting( 'angies_list_link' , array(
+	$wp_customize->add_setting( 'angies_list_link' , array(
             'default'     => 'http://angieslist.com',
             'transport'   => 'postMessage',
         )
@@ -295,31 +273,6 @@ function mullins_customize_register( $wp_customize ) {
         'section'    => 'mullins_home_customizer_section',
         'settings'   => 'mullins_grid_columns',
     ) ) );
-
-    $services_page = get_page_by_title( 'Services' );
-    $services_children = get_posts( array(
-        'post_parent' => $services_page->ID,
-        'posts_per_page' => -1,
-        'post_status' => 'publish',
-        'post_type' => 'page',
-    ) );
-    
-    foreach ( $services_children as $service ) {
-
-        $title = str_replace( ' ', '_', strtolower( $service->post_title ) );
-
-        $wp_customize->add_setting( 'mullins_' . $title . '_icon' , array(
-                'default'     => 'fa fa-flag',
-                'transport'   => 'postMessage',
-            )
-        );
-        $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'mullins_' . $title . '_icon', array(
-            'label'        => __( $service->post_title . ' Icon Classes', THEME_ID ),
-            'section'    => 'mullins_home_customizer_section',
-            'settings'   => 'mullins_' . $title . '_icon',
-        ) ) );
-
-    }
 
 }
 
@@ -360,7 +313,7 @@ add_action( 'init', function () {
 		true
 	);
 
-    wp_localize_script( THEME_ID, THEME_ID . '_data', array( 'serviceCallImage' => get_theme_mod( 'cta_service_call_image', 'http://placehold.it/300x200' ),'serviceCall' => get_theme_mod( 'cta_service_call_color', '#41EEFF' ), 'dependabilityPromise' => get_theme_mod( 'cta_dependability_promise_color', '#002B50' ), 'dependabilityPromiseImage' => get_theme_mod( 'cta_dependability_promise_image', 'http://placehold.it/300x200' ),'ajaxUrl' => admin_url( 'admin-ajax.php' ) ) );
+    wp_localize_script( THEME_ID, THEME_ID . '_data', array( 'serviceCallImage' => get_theme_mod( 'cta_service_call_image', 'http://placehold.it/300x200' ), 'dependabilityPromiseImage' => get_theme_mod( 'cta_dependability_promise_image', 'http://placehold.it/300x200' ),'ajaxUrl' => admin_url( 'admin-ajax.php' ) ) );
 
     // Admin script
     wp_register_script(
@@ -589,44 +542,6 @@ function change_testimonials_form_post_type( $post_data, $form, $entry ) {
 
     $post_data['post_type'] = 'mullins_testimonial';
     return $post_data;
-
-}
-
-/*
- * Allows Testimonials to be Random while getting around WP Engine's RAND limitations
- *
- * @since 0.2.0
- */
-// The AJAX call is given "get_testimonial" which corresponds with the WordPress Action Hook.
-add_action('wp_ajax_get_testimonial', 'get_mullins_testimonial_callback');
-add_action('wp_ajax_nopriv_get_testimonial', 'get_mullins_testimonial_callback');
-function get_mullins_testimonial_callback() {
-
-    global $post;
-
-	$testimonials = get_posts( array(
-        'posts_per_page' => -1,
-        'post_type' => 'mullins_testimonial',
-        'post_status' => 'publish',
-    ) );
-
-    $items = array(); // Create an Array for the JSON
-
-    foreach ( $testimonials as $post ) {
-        setup_postdata( $post );
-
-        $items[] = array(
-            'name' => get_the_title(),
-            'body' => get_the_content(),
-        );
-
-    }
-
-    wp_reset_postdata();
-
-    echo json_encode( $items );
-
-    die();
 
 }
 

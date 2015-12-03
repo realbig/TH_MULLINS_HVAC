@@ -4405,21 +4405,36 @@ throughout this theme's SASS files.
     text-align: center;
     font-size: 4em;
     display: block; }
-  #services h3, #services .fa, #services .wi {
+  #services h3 {
     text-align: center;
-    color: #000; }
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 0;
+    height: 1.5em;
+    color: #fff; }
   #services .row {
     padding: 0.9375rem 0 0.9375rem 0; }
   #services .button {
     margin: 0;
     border-top: none;
     border-bottom: none;
-    width: 100%; }
-  #services .button:hover, #services .button:hover * {
-    color: #fff; }
-  #services .columns:nth-child(odd) .button:hover {
+    width: 100%;
+    background-size: cover;
+    min-height: 250px; }
+    #services .button .overlay {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      opacity: 0.6; }
+  #services .columns:nth-child(odd) .button:hover .overlay {
     background-color: #C31A2F; }
-  #services .columns:nth-child(even) .button:hover {
+  #services .columns:nth-child(even) .button:hover .overlay {
     background-color: #094C8B; }
   @media only screen and (max-width: 40em) {
     #services .vertical-center {
@@ -4499,14 +4514,11 @@ body.home #home-cta {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative; }
-  body.home #home-cta .overlay:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0.75;
-    height: 100%;
-    width: 100%; }
+  body.home #home-cta .cta-text {
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 1em; }
+    body.home #home-cta .cta-text p {
+      font-weight: 700; }
   body.home #home-cta h2 {
     color: #000; }
   body.home #home-cta .tabs li {
@@ -4568,6 +4580,10 @@ header .realbig-slider-container {
       text-decoration: underline; }
       header .realbig-slider-container .realbig-slider.testimonials .add-testimonial:hover {
         text-decoration: none; }
+
+.page-template-template-sub_page .page-image img {
+  float: left;
+  margin-right: 1em; }
 
 /*
 This provides overrides for some WP stuff (not much at all).

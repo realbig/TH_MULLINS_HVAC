@@ -22,11 +22,12 @@ the_post();
 
 				<?php if ( has_post_thumbnail() ) : ?>
 					<div class="page-image">
-						<?php the_post_thumbnail( 'full' ); ?>
+						<?php the_post_thumbnail( 'medium' ); ?>
 					</div>
 				<?php endif; ?>
 
 				<div class="page-copy">
+                    <h1><?php the_title(); ?></h1>
 					<?php the_content(); ?>
 				</div>
 			</div>

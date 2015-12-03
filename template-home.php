@@ -94,8 +94,8 @@ the_post();
 
                                     ?>
                                     <a href = "<?php the_permalink(); ?>" class="medium-<?php echo (12/$remainder); ?> small-12 columns">
-                                        <div id = "<?php echo $title; ?>_grid_item" class="fill button">
-                                            <span class = "<?php echo get_theme_mod( 'mullins_' . $title . '_icon', 'fa fa-flag' ); ?>"></span>
+                                        <div id = "<?php echo $title; ?>_grid_item" class="fill button" style = "background-image: url('<?php echo wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'medium' )[0]; ?>');">
+                                            <div class="overlay"></div>
                                             <h3><?php the_title(); ?></h3>
                                         </div>
                                     </a>
@@ -118,8 +118,8 @@ the_post();
 
                                     ?>
                                     <a href = "<?php the_permalink(); ?>" class="medium-<?php echo (12/$max_grid); ?> small-12 columns">
-                                        <div id = "<?php echo $title; ?>_grid_item" class="fill button">
-                                            <span class = "<?php echo get_theme_mod( 'mullins_' . $title . '_icon', 'fa fa-flag' ); ?>"></span>
+                                        <div id = "<?php echo $title; ?>_grid_item" class="fill button" style = "background-image: url('<?php echo wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'medium' )[0]; ?>');">
+                                            <div class="overlay"></div>
                                             <h3><?php the_title(); ?></h3>
                                         </div>
                                     </a>
