@@ -23,15 +23,17 @@ body.home {
 
     padding: 1em;
     background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
+    background-position: -150px -150px;
+    margin-top: $gutter;
 
     .cta-text {
-        background-color: rgba( 0, 0, 0, 0.25 );
+        background-color: rgba( 0, 0, 0, 0.55 );
         padding: 1em;
 
         p {
             font-weight: 700;
+            color: $light-color;
         }
 
     }
@@ -40,8 +42,63 @@ body.home {
         color: #000;
     }
 
+    .tabs-content > .content.active {
+        float: left;
+    }
+
     .tabs li {
       text-align: center;
+
+        a {
+            background: transparent;
+
+            &.primary.button {
+                background-color: $secondary-color;
+                color: $light-color;
+                border-color: $light-color;
+
+                &:hover {
+                    background-color: $primary-color;
+                }
+
+            }
+
+            &.secondary.button {
+                background-color: $primary-color;
+                color: $light-color;
+                border-color: $light-color;
+
+                &:hover {
+                    background-color: $secondary-color;
+                }
+            }
+
+        }
+
+        &.active {
+
+            a.primary.button {
+
+                background-color: darken( $primary-color, 5% );
+
+                &:hover {
+                    background-color: darken( $secondary-color, 5% );
+                }
+
+            }
+
+            a.secondary.button {
+
+                background-color: darken( $secondary-color, 5% );
+
+                &:hover {
+                    background-color: darken( $primary-color, 5% );
+                }
+
+            }
+
+        }
+
     }
 
     .button {

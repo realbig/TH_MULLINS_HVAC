@@ -4046,6 +4046,11 @@ button, .button {
     button.secondary:hover, .button.secondary:hover {
       border-color: #e6e6e6;
       color: #e6e6e6; }
+    button.secondary.fill, .button.secondary.fill {
+      background-color: #C73144;
+      color: #fff; }
+      button.secondary.fill:hover, .button.secondary.fill:hover {
+        background-color: #0C4E8B; }
   button.warning:active, button.warning:focus, .button.warning:active, .button.warning:focus {
     color: #e87c10; }
   button.warning:hover, .button.warning:hover {
@@ -4512,17 +4517,43 @@ body.home .page-content {
 body.home #home-cta {
   padding: 1em;
   background-repeat: no-repeat;
-  background-size: cover;
-  position: relative; }
+  position: relative;
+  background-position: -150px -150px;
+  margin-top: 30px; }
   body.home #home-cta .cta-text {
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.55);
     padding: 1em; }
     body.home #home-cta .cta-text p {
-      font-weight: 700; }
+      font-weight: 700;
+      color: #fff; }
   body.home #home-cta h2 {
     color: #000; }
+  body.home #home-cta .tabs-content > .content.active {
+    float: left; }
   body.home #home-cta .tabs li {
     text-align: center; }
+    body.home #home-cta .tabs li a {
+      background: transparent; }
+      body.home #home-cta .tabs li a.primary.button {
+        background-color: #C73144;
+        color: #fff;
+        border-color: #fff; }
+        body.home #home-cta .tabs li a.primary.button:hover {
+          background-color: #0C4E8B; }
+      body.home #home-cta .tabs li a.secondary.button {
+        background-color: #0C4E8B;
+        color: #fff;
+        border-color: #fff; }
+        body.home #home-cta .tabs li a.secondary.button:hover {
+          background-color: #C73144; }
+    body.home #home-cta .tabs li.active a.primary.button {
+      background-color: #0a4174; }
+      body.home #home-cta .tabs li.active a.primary.button:hover {
+        background-color: #b32c3d; }
+    body.home #home-cta .tabs li.active a.secondary.button {
+      background-color: #b32c3d; }
+      body.home #home-cta .tabs li.active a.secondary.button:hover {
+        background-color: #0a4174; }
   body.home #home-cta .button {
     text-transform: uppercase;
     font-weight: bold;

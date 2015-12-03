@@ -73,6 +73,16 @@ button, .button {
       border-color: $secondary-button-border-hover;
       color: $secondary-button-border-hover;
     }
+
+      &.fill {
+          background-color: $secondary-color;
+          color: $light-color;
+
+          &:hover {
+              background-color: $primary-color;
+          }
+      }
+
   }
 
   &.warning {
