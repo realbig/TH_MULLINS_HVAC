@@ -32,6 +32,15 @@ define( 'THEME_VERSION', '0.1.0' );
 define( 'THEME_ID', 'mullins_theme' );
 
 /**
+ * Capability required to manage MailChimp options
+ */
+add_action( 'init', 'redefine_mailchimp_capability' );
+function redefine_mailchimp_capability() {
+    runkit_constant_remove( 'MCSF_CAP_THRESHOLD' );
+    define( 'MCSF_CAP_THRESHOLD', 'mailchimp_options' );
+}
+
+/**
  * Fonts for the theme. Must be hosted font (Google fonts for example).
  */
 $mullins_fonts = array(
