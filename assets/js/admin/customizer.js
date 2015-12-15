@@ -52,19 +52,6 @@
 
     /* Home Page */
 
-    /* CTA */
-
-    wp.customize( 'cta_service_call_image', function( value ) {
-		value.bind( function( newVal ) {
-			$( '#home-cta' ).css( 'background-image', 'url(' + newVal + ')' );
-		} );
-	} );
-    wp.customize( 'cta_dependability_promise_image', function( value ) {
-		value.bind( function( newVal ) {
-			console.log( 'Due to how the Tab Toggles trigger, there is no good way to preview this. Neither through postMessage or Refresh.' );
-		} );
-	} );
-
 	wp.customize( 'angies_list_link', function( value ) {
 		value.bind( function( newVal ) {
 			$( '#angies-list-badge a' ).attr( 'href', newVal );
@@ -73,34 +60,6 @@
     wp.customize( 'angies_list_image', function( value ) {
 		value.bind( function( newVal ) {
 			$( '#angies-list-badge a img' ).attr( 'src', newVal );
-		} );
-	} );
-
-    /* Services */
-
-    wp.customize( 'mullins_indoor_air_quality_icon', function( value ) {
-		value.bind( function( newVal ) {
-			$( '#indoor_air_quality_grid_item span' ).removeAttr( 'class' ).addClass( newVal );
-		} );
-	} );
-    wp.customize( 'mullins_refrigeration_icon', function( value ) {
-		value.bind( function( newVal ) {
-			$( '#refrigeration_grid_item span' ).removeAttr( 'class' ).addClass( newVal );
-		} );
-	} );
-    wp.customize( 'mullins_geo_thermal_icon', function( value ) {
-		value.bind( function( newVal ) {
-			$( '#geo_thermal_grid_item span' ).removeAttr( 'class' ).addClass( newVal );
-		} );
-	} );
-    wp.customize( 'mullins_air_conditioning_icon', function( value ) {
-		value.bind( function( newVal ) {
-			$( '#air_conditioning_grid_item span' ).removeAttr( 'class' ).addClass( newVal );
-		} );
-	} );
-    wp.customize( 'mullins_heating_icon', function( value ) {
-		value.bind( function( newVal ) {
-			$( '#heating_grid_item span' ).removeAttr( 'class' ).addClass( newVal );
 		} );
 	} );
 	

@@ -194,52 +194,6 @@ function mullins_customize_register( $wp_customize ) {
         )
     );
 
-    $wp_customize->add_setting( 'cta_service_call_image' , array(
-            'default'     => 'http://placehold.it/300x200',
-            'transport'   => 'postMessage',
-        )
-    );
-    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'cta_service_call_image', array(
-        'label'        => __( 'Service Call CTA Image', THEME_ID ),
-        'section'    => 'mullins_home_customizer_section',
-        'settings'   => 'cta_service_call_image',
-    ) ) );
-
-    $wp_customize->add_setting( 'cta_service_call_text' , array(
-            'default'     => '<p>Enter Text Using the Customizer</p>',
-            'transport'   => 'refresh',
-        )
-    );
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cta_service_call_text', array(
-        'type' => 'textarea',
-        'label'        => __( 'Service Call Text', THEME_ID ),
-        'section'    => 'mullins_home_customizer_section',
-        'settings'   => 'cta_service_call_text',
-    ) ) );
-
-    $wp_customize->add_setting( 'cta_dependability_promise_image' , array(
-            'default'     => 'http://placehold.it/300x200',
-            'transport'   => 'postMessage',
-        )
-    );
-    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'cta_dependability_promise_image', array(
-        'label'        => __( 'Dependability Promise CTA Image', THEME_ID ),
-        'section'    => 'mullins_home_customizer_section',
-        'settings'   => 'cta_dependability_promise_image',
-    ) ) );
-
-    $wp_customize->add_setting( 'cta_dependability_promise_text' , array(
-            'default'     => '<p>Enter Text Using the Customizer</p>',
-            'transport'   => 'refresh',
-        )
-    );
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cta_dependability_promise_text', array(
-        'type' => 'textarea',
-        'label'        => __( 'Dependability Promise Text', THEME_ID ),
-        'section'    => 'mullins_home_customizer_section',
-        'settings'   => 'cta_dependability_promise_text',
-    ) ) );
-
 	$wp_customize->add_setting( 'angies_list_link' , array(
             'default'     => 'http://angieslist.com',
             'transport'   => 'postMessage',
@@ -260,18 +214,6 @@ function mullins_customize_register( $wp_customize ) {
         'label'        => __( 'Angie\'s List Badge URL', THEME_ID ),
         'section'    => 'mullins_home_customizer_section',
         'settings'   => 'angies_list_image',
-    ) ) );
-
-    $wp_customize->add_setting( 'mullins_grid_columns' , array(
-            'default'     => 3,
-            'transport'   => 'refresh',
-        )
-    );
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'mullins_grid_columns', array(
-        'type' => 'number',
-        'label'        => __( 'Services Number of Columns', THEME_ID ),
-        'section'    => 'mullins_home_customizer_section',
-        'settings'   => 'mullins_grid_columns',
     ) ) );
 
 }
@@ -313,7 +255,7 @@ add_action( 'init', function () {
 		true
 	);
 
-    wp_localize_script( THEME_ID, THEME_ID . '_data', array( 'serviceCallImage' => get_theme_mod( 'cta_service_call_image', 'http://placehold.it/300x200' ), 'dependabilityPromiseImage' => get_theme_mod( 'cta_dependability_promise_image', 'http://placehold.it/300x200' ),'ajaxUrl' => admin_url( 'admin-ajax.php' ) ) );
+    wp_localize_script( THEME_ID, THEME_ID . '_data', array( 'ajaxUrl' => admin_url( 'admin-ajax.php' ) ) );
 
     // Admin script
     wp_register_script(
