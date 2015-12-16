@@ -11,10 +11,10 @@ The static site header.
 }
 
 #site-header {
-  background: $medium-color;
   padding: 1em 0.5em;
   padding-bottom: 0;
-  border-bottom: 3px solid $secondary-color;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
 
   .logo {
 
@@ -29,7 +29,6 @@ The static site header.
   }
 
   .phone-number .fa.fa-phone {
-      color: $anchor-font-color;
       text-decoration: $anchor-text-decoration;
       line-height: inherit;
 
@@ -47,7 +46,6 @@ The static site header.
         .menu {
           margin: 0;
           list-style: none;
-          color: $primary-color;
           padding: 0 0.5em;
 
           @media #{$small-only} {
@@ -63,7 +61,8 @@ The static site header.
               float: none;
               text-align: center;
               width: 100% !important;
-              border-top: 3px solid $dark-color;
+              border-top-width: 3px;
+              border-top-style: solid;
             }
 
             &:hover {
@@ -75,14 +74,12 @@ The static site header.
 
               > a {
                 @media #{$medium-up} {
-                  background: $secondary-color;
                   color: $light-color;
                 }
               }
             }
 
             &.current-menu-item {
-                background: darken($primary-color, 5%);
                 color: $light-color;
             }
 
@@ -93,7 +90,8 @@ The static site header.
               }
 
               a {
-                border-left: 3px solid $dark-color;
+                border-left-width: 3px;
+                border-left-style: solid;
               }
             }
 
@@ -101,7 +99,8 @@ The static site header.
               display: block;
               color: inherit;
               padding: 0.5em 1em;
-              border-right: 3px solid $dark-color;
+              border-right-width: 3px;
+              border-right-style: solid;
               font-family: 'Lora';
 
               @media #{$small-only} {
@@ -118,7 +117,6 @@ The static site header.
           white-space: nowrap;
           list-style: none;
           margin: 0;
-          //box-shadow: 0 0 30px rgba(#000, 0.3);
           display: none;
           width: auto;
           padding-right: 3px;
@@ -145,7 +143,6 @@ The static site header.
                             }
 
                             &:hover a {
-                                background: darken($secondary-color, 5%);
                                 color: $light-color;
                                 border: none;
                             }
@@ -163,11 +160,10 @@ The static site header.
             display: block;
             color: $light-color;
             padding: 0.5em;
-            background: $primary-color;
-            border-bottom: 1px solid darken($primary-color, 5%);
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
 
               + .sub-menu a {
-                  background: $secondary-color;
                   color: $light-color;
                   border: none;
               }
@@ -177,7 +173,6 @@ The static site header.
 
               > a {
                 @media #{$medium-up} {
-                  background: $secondary-color;
                   color: $light-color;
                 }
               }

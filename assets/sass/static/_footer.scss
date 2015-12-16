@@ -7,15 +7,14 @@ The static site footer.
 
 #site-footer {
   margin-top: 30px;
-  background: $medium-color;
 
   .primary-nav {
-    background: $medium-color;
 
     @media #{$medium-up} {
     }
 
-    border-bottom: 3px solid $dark-color;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
 
     .menu {
       margin: 0;
@@ -28,7 +27,6 @@ The static site footer.
       }
 
       > .menu-item {
-        color: $primary-color;
         position: relative;
         float: left;
         text-align: center;
@@ -50,13 +48,11 @@ The static site footer.
           > a {
             @media #{$medium-up} {
               color: $light-color;
-              background: $secondary-color;
             }
           }
         }
 
         &.current-menu-item {
-            background: darken($primary-color, 5%);
             color: $light-color;
         }
 
@@ -67,7 +63,8 @@ The static site footer.
           }
 
           a {
-            border-left: 3px solid $dark-color;
+            border-left-width: 3px;
+            border-left-style: solid;
           }
         }
 
@@ -75,7 +72,8 @@ The static site footer.
           display: block;
           color: inherit;
           padding: 0.5em 1em;
-          border-right: 3px solid $dark-color;
+          border-right-width: 3px;
+          border-right-style: solid;
           font-family: 'Lora';
 
           @media #{$small-only} {
@@ -120,7 +118,6 @@ The static site footer.
                         }
 
                         &:hover a {
-                            background: darken($secondary-color, 5%);
                             color: $light-color;
                             border: none;
                         }
@@ -138,75 +135,15 @@ The static site footer.
         display: block;
         color: $light-color;
         padding: 0.5em;
-        background: $primary-color;
-        border-bottom: 1px solid darken($primary-color, 5%);
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
 
           + .sub-menu a {
-              background: $secondary-color;
               color: $light-color;
               border: none;
           }
-
-        &:hover {
-          background: darken($primary-color, 5%);
-        }
       }
     }
   }
 
-  .footer-menu {
-    color: darken($light-color, 30%);
-    font-size: 0.7em;
-    padding: 1em 0.5em;
-    background: $dark-color;
-
-    a {
-      color: inherit;
-    }
-
-    ul {
-      list-style: none;
-      margin: 0;
-      font-size: inherit;
-
-      // Only 3rd level deep and on
-      ul ul {
-        margin-left: 1em;
-
-        // Add dash before third level deep items
-        li {
-          &:before {
-            content: '- ';
-          }
-        }
-      }
-    }
-
-    .footer-menu-column {
-
-      // First level
-      > .pagenav {
-        font-weight: bold;
-        cursor: default;
-        font-size: 1.2em;
-
-        > ul {
-          font-weight: normal;
-          font-size: 0.8em;
-        }
-      }
-    }
-  }
-
-  .footer-mobile {
-    background: $dark-color;
-    color: $light-color;
-    font-size: 2em;
-    font-weight: bold;
-
-    a {
-      color: inherit;
-    }
-
-  }
 }

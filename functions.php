@@ -126,6 +126,50 @@ function mullins_customize_register( $wp_customize ) {
         'settings'   => 'mullins_logo_image',
     ) ) );
     
+    $wp_customize->add_setting( 'mullins_primary_color' , array(
+            'default'     => '#094C8B',
+            'transport'   => 'refresh',
+        )
+    );
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'mullins_primary_color', array(
+        'label'        => __( 'Primary Color', THEME_ID ),
+        'section'    => 'mullins_customizer_section',
+        'settings'   => 'mullins_primary_color',
+    ) ) );
+
+    $wp_customize->add_setting( 'mullins_secondary_color' , array(
+            'default'     => '#C31A2F',
+            'transport'   => 'refresh',
+        )
+    );
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'mullins_secondary_color', array(
+        'label'        => __( 'Secondary Color', THEME_ID ),
+        'section'    => 'mullins_customizer_section',
+        'settings'   => 'mullins_secondary_color',
+    ) ) );
+
+    $wp_customize->add_setting( 'mullins_accent_1' , array(
+            'default'     => '#ebebeb',
+            'transport'   => 'refresh',
+        )
+    );
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'mullins_accent_1', array(
+        'label'        => __( 'Accent 1', THEME_ID ),
+        'section'    => 'mullins_customizer_section',
+        'settings'   => 'mullins_accent_1',
+    ) ) );
+
+    $wp_customize->add_setting( 'mullins_accent_2' , array(
+            'default'     => '#D6E0EB',
+            'transport'   => 'refresh',
+        )
+    );
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'mullins_accent_2', array(
+        'label'        => __( 'Accent 2', THEME_ID ),
+        'section'    => 'mullins_customizer_section',
+        'settings'   => 'mullins_accent_2',
+    ) ) );
+
     $wp_customize->add_setting( 'mullins_address' , array(
             'default'     => '123 Some Street<br />Anytown, USA 45678',
             'transport'   => 'refresh',

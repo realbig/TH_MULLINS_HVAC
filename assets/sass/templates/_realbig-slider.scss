@@ -1,35 +1,3 @@
-.realbig-slider-container{
-
-    .realbig-slider{
-
-        .arrow{
-
-            &:hover{
-                border-color: $logo-red;
-            }
-
-        }
-
-        .indicators{
-
-            li{
-
-                &.active{
-                    background: $logo-blue;
-                }
-
-                &:hover{
-                    background-color: $logo-red;
-                }
-
-            }
-
-        }
-
-    }
-
-}
-
 header .realbig-slider-container {
 
     margin: 0 auto 0;

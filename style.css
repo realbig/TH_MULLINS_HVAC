@@ -4124,10 +4124,10 @@ throughout this theme's SASS files.
   font-size: 1.25em; }
 
 #site-header {
-  background: #ebebeb;
   padding: 1em 0.5em;
   padding-bottom: 0;
-  border-bottom: 3px solid #C73144; }
+  border-bottom-width: 3px;
+  border-bottom-style: solid; }
   @media only screen and (max-width: 40em) {
     #site-header .logo {
       margin-bottom: 10px; } }
@@ -4135,7 +4135,6 @@ throughout this theme's SASS files.
     width: 200px;
     display: inline-block; }
   #site-header .phone-number .fa.fa-phone {
-    color: #0C4E8B;
     text-decoration: none;
     line-height: inherit; }
     #site-header .phone-number .fa.fa-phone img {
@@ -4147,7 +4146,6 @@ throughout this theme's SASS files.
     #site-header .top-nav .menu {
       margin: 0;
       list-style: none;
-      color: #0C4E8B;
       padding: 0 0.5em; }
       @media only screen and (max-width: 40em) {
         #site-header .top-nav .menu {
@@ -4161,27 +4159,28 @@ throughout this theme's SASS files.
             float: none;
             text-align: center;
             width: 100% !important;
-            border-top: 3px solid #D6E0EB; } }
+            border-top-width: 3px;
+            border-top-style: solid; } }
         @media only screen and (min-width: 40.063em) {
           #site-header .top-nav .menu > .menu-item:hover > .sub-menu {
             display: block; } }
         @media only screen and (min-width: 40.063em) {
           #site-header .top-nav .menu > .menu-item:hover > a {
-            background: #C73144;
             color: #fff; } }
         #site-header .top-nav .menu > .menu-item.current-menu-item {
-          background: #0a4174;
           color: #fff; }
         @media only screen and (max-width: 40em) {
           #site-header .top-nav .menu > .menu-item:first-of-type {
             border-top: none; } }
         #site-header .top-nav .menu > .menu-item:first-of-type a {
-          border-left: 3px solid #D6E0EB; }
+          border-left-width: 3px;
+          border-left-style: solid; }
         #site-header .top-nav .menu > .menu-item > a {
           display: block;
           color: inherit;
           padding: 0.5em 1em;
-          border-right: 3px solid #D6E0EB;
+          border-right-width: 3px;
+          border-right-style: solid;
           font-family: 'Lora'; }
           @media only screen and (max-width: 40em) {
             #site-header .top-nav .menu > .menu-item > a {
@@ -4206,24 +4205,21 @@ throughout this theme's SASS files.
           #site-header .top-nav .sub-menu .menu-item:hover > .sub-menu .menu-item a {
             border: none; }
           #site-header .top-nav .sub-menu .menu-item:hover > .sub-menu .menu-item:hover a {
-            background: #b32c3d;
             color: #fff;
             border: none; } }
       #site-header .top-nav .sub-menu a {
         display: block;
         color: #fff;
         padding: 0.5em;
-        background: #0C4E8B;
-        border-bottom: 1px solid #0a4174; }
+        border-bottom-width: 1px;
+        border-bottom-style: solid; }
         #site-header .top-nav .sub-menu a + .sub-menu a {
-          background: #C73144;
           color: #fff;
           border: none; }
         #site-header .top-nav .sub-menu a:hover {
           background: #0a4174; }
           @media only screen and (min-width: 40.063em) {
             #site-header .top-nav .sub-menu a:hover > a {
-              background: #C73144;
               color: #fff; } }
   #site-header .search-form .search-field {
     width: 100%; }
@@ -4255,11 +4251,10 @@ throughout this theme's SASS files.
 @since 0.1.0
 */
 #site-footer {
-  margin-top: 30px;
-  background: #ebebeb; }
+  margin-top: 30px; }
   #site-footer .primary-nav {
-    background: #ebebeb;
-    border-bottom: 3px solid #D6E0EB; }
+    border-bottom-width: 3px;
+    border-bottom-style: solid; }
     #site-footer .primary-nav .menu {
       margin: 0;
       list-style: none;
@@ -4269,7 +4264,6 @@ throughout this theme's SASS files.
         #site-footer .primary-nav .menu {
           padding: 0; } }
       #site-footer .primary-nav .menu > .menu-item {
-        color: #0C4E8B;
         position: relative;
         float: left;
         text-align: center; }
@@ -4284,21 +4278,21 @@ throughout this theme's SASS files.
             display: block; } }
         @media only screen and (min-width: 40.063em) {
           #site-footer .primary-nav .menu > .menu-item:hover > a {
-            color: #fff;
-            background: #C73144; } }
+            color: #fff; } }
         #site-footer .primary-nav .menu > .menu-item.current-menu-item {
-          background: #0a4174;
           color: #fff; }
         @media only screen and (max-width: 40em) {
           #site-footer .primary-nav .menu > .menu-item:first-of-type {
             border-top: none; } }
         #site-footer .primary-nav .menu > .menu-item:first-of-type a {
-          border-left: 3px solid #D6E0EB; }
+          border-left-width: 3px;
+          border-left-style: solid; }
         #site-footer .primary-nav .menu > .menu-item > a {
           display: block;
           color: inherit;
           padding: 0.5em 1em;
-          border-right: 3px solid #D6E0EB;
+          border-right-width: 3px;
+          border-right-style: solid;
           font-family: 'Lora'; }
           @media only screen and (max-width: 40em) {
             #site-footer .primary-nav .menu > .menu-item > a {
@@ -4324,50 +4318,17 @@ throughout this theme's SASS files.
           #site-footer .primary-nav .sub-menu .menu-item:hover > .sub-menu .menu-item a {
             border: none; }
           #site-footer .primary-nav .sub-menu .menu-item:hover > .sub-menu .menu-item:hover a {
-            background: #b32c3d;
             color: #fff;
             border: none; } }
       #site-footer .primary-nav .sub-menu a {
         display: block;
         color: #fff;
         padding: 0.5em;
-        background: #0C4E8B;
-        border-bottom: 1px solid #0a4174; }
+        border-bottom-width: 1px;
+        border-bottom-style: solid; }
         #site-footer .primary-nav .sub-menu a + .sub-menu a {
-          background: #C73144;
           color: #fff;
           border: none; }
-        #site-footer .primary-nav .sub-menu a:hover {
-          background: #0a4174; }
-  #site-footer .footer-menu {
-    color: #b3b3b3;
-    font-size: 0.7em;
-    padding: 1em 0.5em;
-    background: #D6E0EB; }
-    #site-footer .footer-menu a {
-      color: inherit; }
-    #site-footer .footer-menu ul {
-      list-style: none;
-      margin: 0;
-      font-size: inherit; }
-      #site-footer .footer-menu ul ul ul {
-        margin-left: 1em; }
-        #site-footer .footer-menu ul ul ul li:before {
-          content: '- '; }
-    #site-footer .footer-menu .footer-menu-column > .pagenav {
-      font-weight: bold;
-      cursor: default;
-      font-size: 1.2em; }
-      #site-footer .footer-menu .footer-menu-column > .pagenav > ul {
-        font-weight: normal;
-        font-size: 0.8em; }
-  #site-footer .footer-mobile {
-    background: #D6E0EB;
-    color: #fff;
-    font-size: 2em;
-    font-weight: bold; }
-    #site-footer .footer-mobile a {
-      color: inherit; }
 
 /*
 Styles page.php.
@@ -4424,8 +4385,8 @@ li.widget {
 
 #newsletter .button {
   background-color: transparent;
-  color: #0C4E8B;
-  border: 3px #0C4E8B solid;
+  border-width: 3px;
+  border-style: solid;
   text-transform: uppercase;
   font-weight: bold; }
   #newsletter .button:active, #newsletter .button:focus {
@@ -4474,7 +4435,6 @@ body.home .page-content {
       margin: 30px 0; } }
 
 body.home #newsletter .widget {
-  background-color: #ebebeb;
   padding: 30px; }
 
 body.home #newsletter .fa {
@@ -4485,15 +4445,6 @@ body.home #newsletter .mc_signup_submit {
   text-align: right; }
   body.home #newsletter .mc_signup_submit input {
     width: auto; }
-
-.realbig-slider-container .realbig-slider .arrow:hover {
-  border-color: #C31A2F; }
-
-.realbig-slider-container .realbig-slider .indicators li.active {
-  background: #094C8B; }
-
-.realbig-slider-container .realbig-slider .indicators li:hover {
-  background-color: #C31A2F; }
 
 header .realbig-slider-container {
   margin: 0 auto 0; }

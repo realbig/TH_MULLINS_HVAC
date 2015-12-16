@@ -45,8 +45,9 @@ li.widget {
 
     .button {
         background-color: transparent;
-        color: $primary-color;
-        border: 3px $primary-color solid;
+        //color: $primary-color;
+        border-width: 3px;
+        border-style: solid;
         text-transform: uppercase;
         font-weight: bold;
 

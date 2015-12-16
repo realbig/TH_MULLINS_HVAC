@@ -31,6 +31,9 @@ if ( ! isset( $_SESSION ) ) {
 	<![endif]-->
 
 	<?php wp_head(); ?>
+
+    <?php mullins_template( 'customizer-css' ); ?>
+
 </head>
 
 <body <?php body_class(); ?>>
