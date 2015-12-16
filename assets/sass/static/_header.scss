@@ -114,11 +114,10 @@ The static site header.
         // Second level deep (max)
         .sub-menu {
           position: absolute;
-          white-space: nowrap;
           list-style: none;
           margin: 0;
           display: none;
-          width: auto;
+          width: 100%;
           padding-right: 3px;
           z-index: 50;
 

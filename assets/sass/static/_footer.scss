@@ -88,12 +88,11 @@ The static site footer.
     .sub-menu {
       position: absolute;
       bottom: 100%;
-      white-space: nowrap;
       list-style: none;
       margin: 0;
       //box-shadow: 0 0 30px rgba(#000, 0.3);
       display: none;
-      width: auto;
+      width: 100%;
       padding-right: 3px;
       z-index: 50;
 
