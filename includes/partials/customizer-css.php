@@ -9,10 +9,10 @@
     $secondary_color = get_theme_mod( 'mullins_secondary_color', '#C31A2F' );
     $secondary_color_object = new Mexitek\PHPColors\Color( $secondary_color );
 
-    $accent_1 = get_theme_mod( 'mullins_accent_3', '#ebebeb' );
+    $accent_1 = get_theme_mod( 'mullins_accent_1', '#ebebeb' );
     $accent_1_object = new Mexitek\PHPColors\Color( $accent_1 );
 
-    $accent_2 = get_theme_mod( 'mullins_accent_4', '#D6E0EB' );
+    $accent_2 = get_theme_mod( 'mullins_accent_2', '#D6E0EB' );
     $accent_2_object = new Mexitek\PHPColors\Color( $accent_2 );
 ?>
 
@@ -28,6 +28,10 @@
         color: <?php echo $secondary_color; ?>;
     }
     
+    body {
+        background-color: <?php echo $accent_2; ?>;
+    }
+
     /* Header */
     
     #site-header {
