@@ -4017,10 +4017,6 @@ a.color-invert {
   a.color-invert:hover {
     color: #0a4378; }
 
-ul {
-  margin: 0;
-  list-style: none; }
-
 button, .button {
   -webkit-transition: border 300ms, color 300ms, background-color 300ms;
           transition: border 300ms, color 300ms, background-color 300ms; }
