@@ -14,6 +14,9 @@
 
     $accent_2 = get_theme_mod( 'mullins_accent_2', '#D6E0EB' );
     $accent_2_object = new Mexitek\PHPColors\Color( $accent_2 );
+
+    $background = get_theme_mod( 'mullins_background', '#ffffff' );
+    $background_object = new Mexitek\PHPColors\Color( $background );
 ?>
 
 <style type = "text/css">
@@ -30,6 +33,10 @@
     
     body {
         background-color: <?php echo $accent_2; ?>;
+    }
+
+    #wrapper {
+        background-color: <?php echo $background; ?>;
     }
 
     /* Header */

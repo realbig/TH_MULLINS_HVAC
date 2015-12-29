@@ -170,6 +170,17 @@ function mullins_customize_register( $wp_customize ) {
         'settings'   => 'mullins_accent_2',
     ) ) );
 
+    $wp_customize->add_setting( 'mullins_background' , array(
+            'default'     => '#ffffff',
+            'transport'   => 'refresh',
+        )
+    );
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'mullins_background', array(
+        'label'        => __( 'Background', THEME_ID ),
+        'section'    => 'mullins_customizer_section',
+        'settings'   => 'mullins_background',
+    ) ) );
+
     $wp_customize->add_setting( 'mullins_address' , array(
             'default'     => '123 Some Street<br />Anytown, USA 45678',
             'transport'   => 'refresh',
