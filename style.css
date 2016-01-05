@@ -244,7 +244,8 @@ select {
  *    `input` and others.
  */
 button,
-html input[type="button"], input[type="reset"],
+html input[type="button"],
+input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
@@ -645,24 +646,19 @@ select {
   display: none !important; }
 
 /* Specific visibility for tables */
-table.hide-for-landscape,
-table.show-for-portrait {
+table.hide-for-landscape, table.show-for-portrait {
   display: table !important; }
 
-thead.hide-for-landscape,
-thead.show-for-portrait {
+thead.hide-for-landscape, thead.show-for-portrait {
   display: table-header-group !important; }
 
-tbody.hide-for-landscape,
-tbody.show-for-portrait {
+tbody.hide-for-landscape, tbody.show-for-portrait {
   display: table-row-group !important; }
 
-tr.hide-for-landscape,
-tr.show-for-portrait {
+tr.hide-for-landscape, tr.show-for-portrait {
   display: table-row !important; }
 
-td.hide-for-landscape,
-td.show-for-portrait,
+td.hide-for-landscape, td.show-for-portrait,
 th.hide-for-landscape,
 th.show-for-portrait {
   display: table-cell !important; }
@@ -675,20 +671,15 @@ th.show-for-portrait {
   .show-for-portrait {
     display: none !important; }
   /* Specific visibility for tables */
-  table.show-for-landscape,
-  table.hide-for-portrait {
+  table.show-for-landscape, table.hide-for-portrait {
     display: table !important; }
-  thead.show-for-landscape,
-  thead.hide-for-portrait {
+  thead.show-for-landscape, thead.hide-for-portrait {
     display: table-header-group !important; }
-  tbody.show-for-landscape,
-  tbody.hide-for-portrait {
+  tbody.show-for-landscape, tbody.hide-for-portrait {
     display: table-row-group !important; }
-  tr.show-for-landscape,
-  tr.hide-for-portrait {
+  tr.show-for-landscape, tr.hide-for-portrait {
     display: table-row !important; }
-  td.show-for-landscape,
-  td.hide-for-portrait,
+  td.show-for-landscape, td.hide-for-portrait,
   th.show-for-landscape,
   th.hide-for-portrait {
     display: table-cell !important; } }
@@ -701,20 +692,15 @@ th.show-for-portrait {
   .show-for-landscape {
     display: none !important; }
   /* Specific visibility for tables */
-  table.show-for-portrait,
-  table.hide-for-landscape {
+  table.show-for-portrait, table.hide-for-landscape {
     display: table !important; }
-  thead.show-for-portrait,
-  thead.hide-for-landscape {
+  thead.show-for-portrait, thead.hide-for-landscape {
     display: table-header-group !important; }
-  tbody.show-for-portrait,
-  tbody.hide-for-landscape {
+  tbody.show-for-portrait, tbody.hide-for-landscape {
     display: table-row-group !important; }
-  tr.show-for-portrait,
-  tr.hide-for-landscape {
+  tr.show-for-portrait, tr.hide-for-landscape {
     display: table-row !important; }
-  td.show-for-portrait,
-  td.hide-for-landscape,
+  td.show-for-portrait, td.hide-for-landscape,
   th.show-for-portrait,
   th.hide-for-landscape {
     display: table-cell !important; } }
@@ -1888,8 +1874,7 @@ dialog {
   line-height: 1;
   color: #CCCCCC;
   display: none; }
-  .clearing-close:hover,
-  .clearing-close:focus {
+  .clearing-close:hover, .clearing-close:focus {
     color: #CCCCCC; }
 
 .clearing-assembled .clearing-container {
@@ -2004,73 +1989,49 @@ button, .button {
   color: #0C4E8B;
   -webkit-transition: background-color 300ms ease-out;
           transition: background-color 300ms ease-out; }
-  button:hover,
-  button:focus, .button:hover,
-  .button:focus {
+  button:hover, button:focus, .button:hover, .button:focus {
     background-color: transparent; }
-  button:hover,
-  button:focus, .button:hover,
-  .button:focus {
+  button:hover, button:focus, .button:hover, .button:focus {
     color: #0C4E8B; }
   button.secondary, .button.secondary {
     background-color: transparent;
     border-color: #fff;
     color: #0C4E8B; }
-    button.secondary:hover,
-    button.secondary:focus, .button.secondary:hover,
-    .button.secondary:focus {
+    button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
       background-color: transparent; }
-    button.secondary:hover,
-    button.secondary:focus, .button.secondary:hover,
-    .button.secondary:focus {
+    button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
       color: #0C4E8B; }
   button.success, .button.success {
     background-color: transparent;
     border-color: #e6e6e6;
     color: #0C4E8B; }
-    button.success:hover,
-    button.success:focus, .button.success:hover,
-    .button.success:focus {
+    button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
       background-color: transparent; }
-    button.success:hover,
-    button.success:focus, .button.success:hover,
-    .button.success:focus {
+    button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
       color: #0C4E8B; }
   button.alert, .button.alert {
     background-color: transparent;
     border-color: #e82f10;
     color: #0C4E8B; }
-    button.alert:hover,
-    button.alert:focus, .button.alert:hover,
-    .button.alert:focus {
+    button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
       background-color: transparent; }
-    button.alert:hover,
-    button.alert:focus, .button.alert:hover,
-    .button.alert:focus {
+    button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
       color: #0C4E8B; }
   button.warning, .button.warning {
     background-color: transparent;
     border-color: #e87c10;
     color: #0C4E8B; }
-    button.warning:hover,
-    button.warning:focus, .button.warning:hover,
-    .button.warning:focus {
+    button.warning:hover, button.warning:focus, .button.warning:hover, .button.warning:focus {
       background-color: transparent; }
-    button.warning:hover,
-    button.warning:focus, .button.warning:hover,
-    .button.warning:focus {
+    button.warning:hover, button.warning:focus, .button.warning:hover, .button.warning:focus {
       color: #0C4E8B; }
   button.info, .button.info {
     background-color: transparent;
     border-color: #80c4e0;
     color: #0C4E8B; }
-    button.info:hover,
-    button.info:focus, .button.info:hover,
-    .button.info:focus {
+    button.info:hover, button.info:focus, .button.info:hover, .button.info:focus {
       background-color: transparent; }
-    button.info:hover,
-    button.info:focus, .button.info:hover,
-    .button.info:focus {
+    button.info:hover, button.info:focus, .button.info:hover, .button.info:focus {
       color: #0C4E8B; }
   button.large, .button.large {
     padding: 1.125rem 2.25rem 1.1875rem 2.25rem;
@@ -2102,23 +2063,11 @@ button, .button {
     box-shadow: none;
     cursor: default;
     opacity: 0.7; }
-    button.disabled:hover,
-    button.disabled:focus, button[disabled]:hover,
-    button[disabled]:focus, .button.disabled:hover,
-    .button.disabled:focus, .button[disabled]:hover,
-    .button[disabled]:focus {
+    button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
       background-color: transparent; }
-    button.disabled:hover,
-    button.disabled:focus, button[disabled]:hover,
-    button[disabled]:focus, .button.disabled:hover,
-    .button.disabled:focus, .button[disabled]:hover,
-    .button[disabled]:focus {
+    button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
       color: #0C4E8B; }
-    button.disabled:hover,
-    button.disabled:focus, button[disabled]:hover,
-    button[disabled]:focus, .button.disabled:hover,
-    .button.disabled:focus, .button[disabled]:hover,
-    .button[disabled]:focus {
+    button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
       background-color: transparent; }
     button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, .button[disabled].secondary {
       background-color: transparent;
@@ -2127,23 +2076,11 @@ button, .button {
       box-shadow: none;
       cursor: default;
       opacity: 0.7; }
-      button.disabled.secondary:hover,
-      button.disabled.secondary:focus, button[disabled].secondary:hover,
-      button[disabled].secondary:focus, .button.disabled.secondary:hover,
-      .button.disabled.secondary:focus, .button[disabled].secondary:hover,
-      .button[disabled].secondary:focus {
+      button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
         background-color: transparent; }
-      button.disabled.secondary:hover,
-      button.disabled.secondary:focus, button[disabled].secondary:hover,
-      button[disabled].secondary:focus, .button.disabled.secondary:hover,
-      .button.disabled.secondary:focus, .button[disabled].secondary:hover,
-      .button[disabled].secondary:focus {
+      button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
         color: #0C4E8B; }
-      button.disabled.secondary:hover,
-      button.disabled.secondary:focus, button[disabled].secondary:hover,
-      button[disabled].secondary:focus, .button.disabled.secondary:hover,
-      .button.disabled.secondary:focus, .button[disabled].secondary:hover,
-      .button[disabled].secondary:focus {
+      button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
         background-color: transparent; }
     button.disabled.success, button[disabled].success, .button.disabled.success, .button[disabled].success {
       background-color: transparent;
@@ -2152,23 +2089,11 @@ button, .button {
       box-shadow: none;
       cursor: default;
       opacity: 0.7; }
-      button.disabled.success:hover,
-      button.disabled.success:focus, button[disabled].success:hover,
-      button[disabled].success:focus, .button.disabled.success:hover,
-      .button.disabled.success:focus, .button[disabled].success:hover,
-      .button[disabled].success:focus {
+      button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
         background-color: transparent; }
-      button.disabled.success:hover,
-      button.disabled.success:focus, button[disabled].success:hover,
-      button[disabled].success:focus, .button.disabled.success:hover,
-      .button.disabled.success:focus, .button[disabled].success:hover,
-      .button[disabled].success:focus {
+      button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
         color: #0C4E8B; }
-      button.disabled.success:hover,
-      button.disabled.success:focus, button[disabled].success:hover,
-      button[disabled].success:focus, .button.disabled.success:hover,
-      .button.disabled.success:focus, .button[disabled].success:hover,
-      .button[disabled].success:focus {
+      button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
         background-color: transparent; }
     button.disabled.alert, button[disabled].alert, .button.disabled.alert, .button[disabled].alert {
       background-color: transparent;
@@ -2177,23 +2102,11 @@ button, .button {
       box-shadow: none;
       cursor: default;
       opacity: 0.7; }
-      button.disabled.alert:hover,
-      button.disabled.alert:focus, button[disabled].alert:hover,
-      button[disabled].alert:focus, .button.disabled.alert:hover,
-      .button.disabled.alert:focus, .button[disabled].alert:hover,
-      .button[disabled].alert:focus {
+      button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
         background-color: transparent; }
-      button.disabled.alert:hover,
-      button.disabled.alert:focus, button[disabled].alert:hover,
-      button[disabled].alert:focus, .button.disabled.alert:hover,
-      .button.disabled.alert:focus, .button[disabled].alert:hover,
-      .button[disabled].alert:focus {
+      button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
         color: #0C4E8B; }
-      button.disabled.alert:hover,
-      button.disabled.alert:focus, button[disabled].alert:hover,
-      button[disabled].alert:focus, .button.disabled.alert:hover,
-      .button.disabled.alert:focus, .button[disabled].alert:hover,
-      .button[disabled].alert:focus {
+      button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
         background-color: transparent; }
     button.disabled.warning, button[disabled].warning, .button.disabled.warning, .button[disabled].warning {
       background-color: transparent;
@@ -2202,23 +2115,11 @@ button, .button {
       box-shadow: none;
       cursor: default;
       opacity: 0.7; }
-      button.disabled.warning:hover,
-      button.disabled.warning:focus, button[disabled].warning:hover,
-      button[disabled].warning:focus, .button.disabled.warning:hover,
-      .button.disabled.warning:focus, .button[disabled].warning:hover,
-      .button[disabled].warning:focus {
+      button.disabled.warning:hover, button.disabled.warning:focus, button[disabled].warning:hover, button[disabled].warning:focus, .button.disabled.warning:hover, .button.disabled.warning:focus, .button[disabled].warning:hover, .button[disabled].warning:focus {
         background-color: transparent; }
-      button.disabled.warning:hover,
-      button.disabled.warning:focus, button[disabled].warning:hover,
-      button[disabled].warning:focus, .button.disabled.warning:hover,
-      .button.disabled.warning:focus, .button[disabled].warning:hover,
-      .button[disabled].warning:focus {
+      button.disabled.warning:hover, button.disabled.warning:focus, button[disabled].warning:hover, button[disabled].warning:focus, .button.disabled.warning:hover, .button.disabled.warning:focus, .button[disabled].warning:hover, .button[disabled].warning:focus {
         color: #0C4E8B; }
-      button.disabled.warning:hover,
-      button.disabled.warning:focus, button[disabled].warning:hover,
-      button[disabled].warning:focus, .button.disabled.warning:hover,
-      .button.disabled.warning:focus, .button[disabled].warning:hover,
-      .button[disabled].warning:focus {
+      button.disabled.warning:hover, button.disabled.warning:focus, button[disabled].warning:hover, button[disabled].warning:focus, .button.disabled.warning:hover, .button.disabled.warning:focus, .button[disabled].warning:hover, .button[disabled].warning:focus {
         background-color: transparent; }
     button.disabled.info, button[disabled].info, .button.disabled.info, .button[disabled].info {
       background-color: transparent;
@@ -2227,23 +2128,11 @@ button, .button {
       box-shadow: none;
       cursor: default;
       opacity: 0.7; }
-      button.disabled.info:hover,
-      button.disabled.info:focus, button[disabled].info:hover,
-      button[disabled].info:focus, .button.disabled.info:hover,
-      .button.disabled.info:focus, .button[disabled].info:hover,
-      .button[disabled].info:focus {
+      button.disabled.info:hover, button.disabled.info:focus, button[disabled].info:hover, button[disabled].info:focus, .button.disabled.info:hover, .button.disabled.info:focus, .button[disabled].info:hover, .button[disabled].info:focus {
         background-color: transparent; }
-      button.disabled.info:hover,
-      button.disabled.info:focus, button[disabled].info:hover,
-      button[disabled].info:focus, .button.disabled.info:hover,
-      .button.disabled.info:focus, .button[disabled].info:hover,
-      .button[disabled].info:focus {
+      button.disabled.info:hover, button.disabled.info:focus, button[disabled].info:hover, button[disabled].info:focus, .button.disabled.info:hover, .button.disabled.info:focus, .button[disabled].info:hover, .button[disabled].info:focus {
         color: #0C4E8B; }
-      button.disabled.info:hover,
-      button.disabled.info:focus, button[disabled].info:hover,
-      button[disabled].info:focus, .button.disabled.info:hover,
-      .button.disabled.info:focus, .button[disabled].info:hover,
-      .button[disabled].info:focus {
+      button.disabled.info:hover, button.disabled.info:focus, button[disabled].info:hover, button[disabled].info:focus, .button.disabled.info:hover, .button.disabled.info:focus, .button[disabled].info:hover, .button[disabled].info:focus {
         background-color: transparent; }
 
 button::-moz-focus-inner {
@@ -2394,8 +2283,7 @@ a {
   color: #0C4E8B;
   text-decoration: none;
   line-height: inherit; }
-  a:hover,
-  a:focus {
+  a:hover, a:focus {
     color: #0a4378; }
   a img {
     border: none; }
@@ -2514,9 +2402,7 @@ ul li ol {
   margin-left: 1.25rem;
   margin-bottom: 0; }
 
-ul.square li ul,
-ul.circle li ul,
-ul.disc li ul {
+ul.square li ul, ul.circle li ul, ul.disc li ul {
   list-style: inherit; }
 
 ul.square {
@@ -2832,36 +2718,21 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   input[type="text"]:disabled, input[type="password"]:disabled, input[type="date"]:disabled, input[type="datetime"]:disabled, input[type="datetime-local"]:disabled, input[type="month"]:disabled, input[type="week"]:disabled, input[type="email"]:disabled, input[type="number"]:disabled, input[type="search"]:disabled, input[type="tel"]:disabled, input[type="time"]:disabled, input[type="url"]:disabled, input[type="color"]:disabled, textarea:disabled {
     background-color: #DDDDDD;
     cursor: default; }
-  input[type="text"][disabled],
-  input[type="text"][readonly],
-  fieldset[disabled] input[type="text"], input[type="password"][disabled],
-  input[type="password"][readonly],
-  fieldset[disabled] input[type="password"], input[type="date"][disabled],
-  input[type="date"][readonly],
-  fieldset[disabled] input[type="date"], input[type="datetime"][disabled],
-  input[type="datetime"][readonly],
-  fieldset[disabled] input[type="datetime"], input[type="datetime-local"][disabled],
-  input[type="datetime-local"][readonly],
-  fieldset[disabled] input[type="datetime-local"], input[type="month"][disabled],
-  input[type="month"][readonly],
-  fieldset[disabled] input[type="month"], input[type="week"][disabled],
-  input[type="week"][readonly],
-  fieldset[disabled] input[type="week"], input[type="email"][disabled],
-  input[type="email"][readonly],
-  fieldset[disabled] input[type="email"], input[type="number"][disabled],
-  input[type="number"][readonly],
-  fieldset[disabled] input[type="number"], input[type="search"][disabled],
-  input[type="search"][readonly],
-  fieldset[disabled] input[type="search"], input[type="tel"][disabled],
-  input[type="tel"][readonly],
-  fieldset[disabled] input[type="tel"], input[type="time"][disabled],
-  input[type="time"][readonly],
-  fieldset[disabled] input[type="time"], input[type="url"][disabled],
-  input[type="url"][readonly],
-  fieldset[disabled] input[type="url"], input[type="color"][disabled],
-  input[type="color"][readonly],
-  fieldset[disabled] input[type="color"], textarea[disabled],
-  textarea[readonly],
+  input[type="text"][disabled], input[type="text"][readonly],
+  fieldset[disabled] input[type="text"], input[type="password"][disabled], input[type="password"][readonly],
+  fieldset[disabled] input[type="password"], input[type="date"][disabled], input[type="date"][readonly],
+  fieldset[disabled] input[type="date"], input[type="datetime"][disabled], input[type="datetime"][readonly],
+  fieldset[disabled] input[type="datetime"], input[type="datetime-local"][disabled], input[type="datetime-local"][readonly],
+  fieldset[disabled] input[type="datetime-local"], input[type="month"][disabled], input[type="month"][readonly],
+  fieldset[disabled] input[type="month"], input[type="week"][disabled], input[type="week"][readonly],
+  fieldset[disabled] input[type="week"], input[type="email"][disabled], input[type="email"][readonly],
+  fieldset[disabled] input[type="email"], input[type="number"][disabled], input[type="number"][readonly],
+  fieldset[disabled] input[type="number"], input[type="search"][disabled], input[type="search"][readonly],
+  fieldset[disabled] input[type="search"], input[type="tel"][disabled], input[type="tel"][readonly],
+  fieldset[disabled] input[type="tel"], input[type="time"][disabled], input[type="time"][readonly],
+  fieldset[disabled] input[type="time"], input[type="url"][disabled], input[type="url"][readonly],
+  fieldset[disabled] input[type="url"], input[type="color"][disabled], input[type="color"][readonly],
+  fieldset[disabled] input[type="color"], textarea[disabled], textarea[readonly],
   fieldset[disabled] textarea {
     background-color: #DDDDDD;
     cursor: default; }
@@ -3218,31 +3089,26 @@ throughout this theme's SASS files.
 .wi-rotate-90 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
   -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
   transform: rotate(90deg); }
 
 .wi-rotate-180 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
   -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
   transform: rotate(180deg); }
 
 .wi-rotate-270 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   -webkit-transform: rotate(270deg);
-  -ms-transform: rotate(270deg);
   transform: rotate(270deg); }
 
 .wi-flip-horizontal {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
   -webkit-transform: scale(-1, 1);
-  -ms-transform: scale(-1, 1);
   transform: scale(-1, 1); }
 
 .wi-flip-vertical {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
   -webkit-transform: scale(1, -1);
-  -ms-transform: scale(1, -1);
   transform: scale(1, -1); }
 
 .wi-day-sunny:before {
@@ -4006,7 +3872,7 @@ throughout this theme's SASS files.
 
 @since 0.1.0
 */
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   html,
   body {
     width: 100%;
@@ -4371,17 +4237,29 @@ throughout this theme's SASS files.
 li.widget {
   list-style: none; }
 
-#newsletter .button {
-  background-color: transparent;
-  border-width: 3px;
-  border-style: solid;
-  text-transform: uppercase;
-  font-weight: bold; }
-  #newsletter .button:active, #newsletter .button:focus {
-    color: #fff; }
-  #newsletter .button:hover {
-    color: #e6e6e6;
-    border: 3px #e6e6e6 solid; }
+.widget_angies_list_badge {
+  text-align: center; }
+
+.widget_custom_mailchimpsf_widget, .widget_mailchimpsf_widget {
+  padding: 30px; }
+  .widget_custom_mailchimpsf_widget .fa, .widget_mailchimpsf_widget .fa {
+    font-size: 2em;
+    margin-top: -0.2em; }
+  .widget_custom_mailchimpsf_widget .mc_signup_submit, .widget_mailchimpsf_widget .mc_signup_submit {
+    text-align: right; }
+    .widget_custom_mailchimpsf_widget .mc_signup_submit input, .widget_mailchimpsf_widget .mc_signup_submit input {
+      width: auto; }
+  .widget_custom_mailchimpsf_widget .button, .widget_mailchimpsf_widget .button {
+    background-color: transparent;
+    border-width: 3px;
+    border-style: solid;
+    text-transform: uppercase;
+    font-weight: bold; }
+    .widget_custom_mailchimpsf_widget .button:active, .widget_custom_mailchimpsf_widget .button:focus, .widget_mailchimpsf_widget .button:active, .widget_mailchimpsf_widget .button:focus {
+      color: #fff; }
+    .widget_custom_mailchimpsf_widget .button:hover, .widget_mailchimpsf_widget .button:hover {
+      color: #e6e6e6;
+      border: 3px #e6e6e6 solid; }
 
 /*
 Styles single.php.
@@ -4421,18 +4299,6 @@ body.home .page-content {
   @media only screen and (min-width: 40.063em) {
     body.home .page-content {
       margin: 30px 0; } }
-
-body.home #newsletter .widget {
-  padding: 30px; }
-
-body.home #newsletter .fa {
-  font-size: 2em;
-  margin-top: -0.2em; }
-
-body.home #newsletter .mc_signup_submit {
-  text-align: right; }
-  body.home #newsletter .mc_signup_submit input {
-    width: auto; }
 
 header .realbig-slider-container {
   margin: 0 auto 0; }

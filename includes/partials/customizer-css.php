@@ -109,12 +109,12 @@
     
     /* Newsletter Signup */
 
-    #newsletter .button {
+    .widget_custom_mailchimpsf_widget .button, .widget_mailchimpsf_widget .button {
         color: <?php echo $primary_color; ?>;
         border-color: <?php echo $primary_color; ?>;
     }
     
-    #newsletter .widget {
+    .widget_custom_mailchimpsf_widget, .widget_mailchimpsf_widget {
         background-color: <?php echo $accent_1; ?>;
     }
     

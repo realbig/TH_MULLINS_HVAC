@@ -249,37 +249,6 @@ function mullins_customize_register( $wp_customize ) {
         'settings'   => 'mullins_footer_columns',
     ) ) );
 
-    // Home Page Specific
-
-    $wp_customize->add_section( 'mullins_home_customizer_section' , array(
-            'title'      => __( 'Home Page Settings', THEME_ID ),
-            'priority'   => 40,
-            'active_callback' => 'is_front_page',
-        )
-    );
-
-	$wp_customize->add_setting( 'angies_list_link' , array(
-            'default'     => 'http://angieslist.com',
-            'transport'   => 'postMessage',
-        )
-    );
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'angies_list_link', array(
-        'label'        => __( 'Angie\'s List Link URL', THEME_ID ),
-        'section'    => 'mullins_home_customizer_section',
-        'settings'   => 'angies_list_link',
-    ) ) );
-
-    $wp_customize->add_setting( 'angies_list_image' , array(
-            'default'     => '//placeholdit.imgix.net/~text?txtsize=33&txt=Angie%27s+List+Badge&w=250&h=250&txttrack=0',
-            'transport'   => 'postMessage',
-        )
-    );
-    $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'angies_list_image', array(
-        'label'        => __( 'Angie\'s List Badge URL', THEME_ID ),
-        'section'    => 'mullins_home_customizer_section',
-        'settings'   => 'angies_list_image',
-    ) ) );
-
 }
 
 /**
@@ -391,6 +360,13 @@ add_action( 'after_setup_theme', function () {
  * @since 0.1.0
  */
 add_action( 'widgets_init', function () {
+    
+    // Home Page
+    register_sidebar( array(
+        'name' => __( 'Home Page Sidebar', THEME_ID ),
+        'id' => 'home-page-sidebar',
+        'description' => __( 'Widgets in this area will be shown in the Home Page Sidebar.', THEME_ID ),
+    ) );
 
 	// Sub-Page
 	register_sidebar( array(
@@ -550,5 +526,18 @@ function change_testimonials_form_post_type( $post_data, $form, $entry ) {
     return $post_data;
 
 }
+
+require_once __DIR__ . '/includes/class-angies-list-widget.php';
+require_once __DIR__ . '/includes/class-mailchimp-widget.php';
+
+add_action( 'widgets_init', 'mullins_register_custom_widgets' );
+function mullins_register_custom_widgets() {
+    
+    register_widget( 'Angies_List_Badge' );
+    register_widget( 'custom_mailchimpSF_widget' );
+    
+}
+
+
 
 require_once __DIR__ . '/includes/theme-functions.php';

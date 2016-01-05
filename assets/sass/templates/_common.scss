@@ -33,7 +33,28 @@ li.widget {
     list-style: none;
 }
 
-#newsletter {
+.widget_angies_list_badge {
+    text-align: center;
+}
+
+.widget_custom_mailchimpsf_widget, .widget_mailchimpsf_widget {
+    
+    padding: $gutter;
+    
+    .fa {
+        font-size: 2em;
+        margin-top: -0.2em;
+    }
+
+    .mc_signup_submit {
+
+        text-align: right;
+
+        input {
+            width: auto;
+        }
+
+    }
 
     .button {
         background-color: transparent;
