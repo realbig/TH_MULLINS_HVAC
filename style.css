@@ -4235,7 +4235,8 @@ throughout this theme's SASS files.
   max-width: initial; }
 
 li.widget {
-  list-style: none; }
+  list-style: none;
+  margin-bottom: 1em; }
 
 .widget_angies_list_badge {
   text-align: center; }
