@@ -3885,34 +3885,22 @@ a.color-invert {
 
 button, .button {
   -webkit-transition: border 300ms, color 300ms, background-color 300ms;
-          transition: border 300ms, color 300ms, background-color 300ms; }
+          transition: border 300ms, color 300ms, background-color 300ms;
+  border: 3px #e6e6e6 solid; }
   button:hover, .button:hover {
     border-color: #0b467d;
     color: #0b467d; }
   button:active, button:focus, .button:active, .button:focus {
     color: inherit; }
-  button.fill, .button.fill {
-    background-color: #ebebeb;
-    color: #D6E0EB;
-    border: none; }
-    button.fill:active, button.fill:focus, .button.fill:active, .button.fill:focus {
-      color: #fff; }
-    button.fill:hover, .button.fill:hover {
-      background-color: #dedede;
-      color: #0C4E8B; }
-  button.secondary, .button.secondary {
-    color: #C73144;
-    border-color: #C73144; }
-    button.secondary:active, button.secondary:focus, .button.secondary:active, .button.secondary:focus {
-      color: #fff; }
-    button.secondary:hover, .button.secondary:hover {
-      border-color: #e6e6e6;
-      color: #e6e6e6; }
-    button.secondary.fill, .button.secondary.fill {
-      background-color: #C73144;
-      color: #fff; }
-      button.secondary.fill:hover, .button.secondary.fill:hover {
-        background-color: #0C4E8B; }
+  button:hover, .button:hover {
+    color: #e6e6e6 !important;
+    border: 3px #e6e6e6 solid !important; }
+  button.fill:active, button.fill:focus, .button.fill:active, .button.fill:focus {
+    color: #fff; }
+  button.fill:hover, .button.fill:hover {
+    background-color: none !important; }
+  button.secondary:active, button.secondary:focus, .button.secondary:active, .button.secondary:focus {
+    color: #fff; }
   button.warning:active, button.warning:focus, .button.warning:active, .button.warning:focus {
     color: #e87c10; }
   button.warning:hover, .button.warning:hover {
@@ -4259,8 +4247,8 @@ li.widget {
     .widget_custom_mailchimpsf_widget .button:active, .widget_custom_mailchimpsf_widget .button:focus, .widget_mailchimpsf_widget .button:active, .widget_mailchimpsf_widget .button:focus {
       color: #fff; }
     .widget_custom_mailchimpsf_widget .button:hover, .widget_mailchimpsf_widget .button:hover {
-      color: #e6e6e6;
-      border: 3px #e6e6e6 solid; }
+      color: #e6e6e6 !important;
+      border: 3px #e6e6e6 solid !important; }
 
 /*
 Styles single.php.

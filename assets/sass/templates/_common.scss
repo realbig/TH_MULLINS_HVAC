@@ -70,8 +70,8 @@ li.widget {
         }
 
         &:hover {
-          color: $secondary-button-border-hover;
-          border: 3px $secondary-button-border-hover solid;
+          color: $secondary-button-border-hover !important;
+          border: 3px $secondary-button-border-hover solid !important;
         }
     }
 

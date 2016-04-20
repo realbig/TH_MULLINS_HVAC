@@ -560,4 +560,59 @@ function mullins_add_google_analytics() {
     <?php
 }
 
+add_action( 'admin_init', 'add_mullins_button_tinymce_filters' );
+function add_mullins_button_tinymce_filters() {
+    
+    if ( current_user_can( 'edit_posts' ) && current_user_can( 'edit_pages' ) ) {
+        
+        add_filter( 'mce_buttons', function( $buttons ) {
+            array_push( $buttons, 'mullins_button_shortcode' );
+            return $buttons;
+        } );
+        
+        // Attach script to the button rather than enqueueing it
+        add_filter( 'mce_external_plugins', function( $plugin_array ) {
+            $plugin_array['mullins_button_shortcode_script'] = get_stylesheet_directory_uri() . '/assets/js/admin/tinymce/button-shortcode.js';
+            return $plugin_array;
+        } );
+        
+    }
+    
+}
+
+add_shortcode( 'button', 'add_mullins_button_shortcode' );
+function add_mullins_button_shortcode( $atts, $content ) {
+    
+    $atts = shortcode_atts(
+        array( // a few default values
+            'url' => '#',
+            'color' => 'primary',
+            'style' => 'ghost',
+            'new_tab' => 'false'
+        ),
+        $atts,
+        'button'
+    );
+    
+    ob_start(); 
+    
+    if ( ( strpos( $atts['url'], '#' ) !== 0 ) && ( strpos( $atts['url'], 'http' ) !== 0 ) && ( strpos( $atts['url'], '/' ) !== 0 ) ) :
+        $atts['url'] = '//' . $atts['url'];
+    endif;
+
+    ?>
+
+    <a href="<?php echo $atts['url']; ?>" class="button <?php echo $atts['color'] . ' ' . $atts['style']; ?>" target="<?php echo ( strtolower( $atts['new_tab'] ) == 'true' ? '_blank' : '_self' ); ?>">
+        <?php echo $content; ?>
+    </a>
+
+    <?php
+    
+    $output = ob_get_contents();
+    ob_end_clean();
+    
+    return html_entity_decode( $output );
+    
+}
+
 require_once __DIR__ . '/includes/theme-functions.php';

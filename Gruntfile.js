@@ -26,7 +26,7 @@ module.exports = function (grunt) {
                 tasks: ['uglify:front', 'notify:js']
             },
             js_admin: {
-                files: ['assets/js/admin/*.js'],
+                files: ['assets/js/admin/*.js', '!assets/js/tinymce'],
                 tasks: ['uglify:admin', 'notify:js_admin']
             },
             livereload: {
@@ -93,7 +93,8 @@ module.exports = function (grunt) {
                 files: {
                     'admin.js': [
                         'assets/js/admin/*.js',
-                        '!assets/js/admin/customizer.js'
+                        '!assets/js/admin/customizer.js',
+                        '!assets/js/admin/tinymce',
                     ],
                     'customizer.js': [
                         'assets/js/admin/customizer.js'

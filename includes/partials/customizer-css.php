@@ -38,6 +38,74 @@
     #wrapper {
         background-color: <?php echo $background; ?>;
     }
+    
+    .button.ghost {
+        background-color: transparent !important;
+    }
+    
+    .button.primary {
+        border-color: <?php echo $primary_color; ?>;
+        color: <?php echo $primary_color; ?>;
+    }
+    
+    .button.primary.fill {
+        background-color: <?php echo $primary_color; ?>;
+        border-color: <?php echo $primary_color; ?>;
+        color: <?php echo ( $primary_color_object->isLight() ? '#000' : '#fff' ); ?>;
+    }
+    
+    .button.primary.ghost {
+        color: <?php echo $primary_color; ?>;
+        border-color: <?php echo $primary_color; ?>;
+    }
+    
+    .button.secondary {
+        border-color: <?php echo $secondary_color; ?>;
+        color: <?php echo $secondary_color; ?>;
+    }
+    
+    .button.secondary.fill {
+        background-color: <?php echo $secondary_color; ?>;
+        border-color: <?php echo $secondary_color; ?>;
+        color: <?php echo ( $secondary_color_object->isLight() ? '#000' : '#fff' ); ?>;
+    }
+    
+    .button.secondary.ghost {
+        color: <?php echo $secondary_color; ?>;
+        border-color: <?php echo $secondary_color; ?>;
+    }
+    
+    .button.accent-1 {
+        border-color: <?php echo $accent_1; ?>;
+        color: <?php echo $accent_1; ?>;
+    }
+    
+    .button.accent-1.fill {
+        background-color: <?php echo $accent_1; ?>;
+        border-color: <?php echo $accent_1; ?>;
+        color: <?php echo ( $accent_1_object->isLight() ? '#000' : '#fff' ); ?>;
+    }
+    
+    .button.accent-1.ghost {
+        color: <?php echo $accent_1; ?>;
+        border-color: <?php echo $accent_1; ?>;
+    }
+    
+    .button.accent-2 {
+        border-color: <?php echo $accent_1; ?>;
+        color: <?php echo $accent_1; ?>;
+    }
+    
+    .button.accent-2.fill {
+        background-color: <?php echo $accent_2; ?>;
+        border-color: <?php echo $accent_2; ?>;
+        color: <?php echo ( $accent_2_object->isLight() ? '#000' : '#fff' ); ?>;
+    }
+    
+    .button.accent-2.ghost {
+        color: <?php echo $accent_2; ?>;
+        border-color: <?php echo $accent_2; ?>;
+    }
 
     /* Header */
     

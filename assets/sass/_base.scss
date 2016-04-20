@@ -40,43 +40,31 @@ button, .button {
   &:active, &:focus {
     color: inherit;
   }
+    
+    &:hover {
+        color: $secondary-button-border-hover !important;
+        border: 3px $secondary-button-border-hover solid !important;
+    }
 
   &.fill {
-    background-color: $medium-color;
-    color: $dark-color;
-    border: none;
 
     &:active, &:focus {
       color: $light-color;
     }
-
-    &:hover {
-      background-color: darken($medium-color, 5%);
-      color: $primary-color;
-    }
+      
+      &:hover {
+          background-color: none !important;
+      }
+      
   }
+    
+    border: 3px $secondary-button-border-hover solid;
 
   &.secondary {
-    color: $secondary-color;
-    border-color: $secondary-color;
 
     &:active, &:focus {
       color: $light-color;
     }
-
-    &:hover {
-      border-color: $secondary-button-border-hover;
-      color: $secondary-button-border-hover;
-    }
-
-      &.fill {
-          background-color: $secondary-color;
-          color: $light-color;
-
-          &:hover {
-              background-color: $primary-color;
-          }
-      }
 
   }
 
