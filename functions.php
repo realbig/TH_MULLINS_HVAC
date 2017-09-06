@@ -528,13 +528,19 @@ function change_testimonials_form_post_type( $post_data, $form, $entry ) {
 }
 
 require_once __DIR__ . '/includes/class-angies-list-widget.php';
-require_once __DIR__ . '/includes/class-mailchimp-widget.php';
+
+if ( class_exists( 'mailchimpSF_Widget' ) ) {
+	require_once __DIR__ . '/includes/class-mailchimp-widget.php';
+}
 
 add_action( 'widgets_init', 'mullins_register_custom_widgets' );
 function mullins_register_custom_widgets() {
     
     register_widget( 'Angies_List_Badge' );
-    register_widget( 'custom_mailchimpSF_widget' );
+	
+	if ( class_exists( 'mailchimpSF_Widget' ) ) {
+    	register_widget( 'custom_mailchimpSF_widget' );
+	}
     
 }
 
