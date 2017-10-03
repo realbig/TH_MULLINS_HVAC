@@ -6,6 +6,8 @@
  * @package Mullins
  */
 
+die(); // RIP
+
 // Don't load directly
 if ( ! defined( 'ABSPATH' ) ) {
 	die;
